@@ -2,12 +2,18 @@
 
 ## Table of Contents
 
-- [Path of Exile API TS](#path-of-exile-api-ts)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Overview](#overview)
-  - [Installation](#installation)
-  - [Getting started](#getting-started)
+- [Introduction](#introduction)
+- [Overview](#overview)
+- [Installation](#installation)
+- [Getting started](#getting-started)
+  - [Session API](#session-api)
+  - [OAuth API](#oauth-api)
+- [Examples](#examples)
+  - [PublicAPI](#publicapi)
+  - [SessionAPI](#sessionapi)
+  - [OAuthAPI](#oauthapi)
+  - [PoENinja API](#poeninja-api)
+- [Handling errors](#handling-errors)
 
 ## Introduction
 
