@@ -1,6 +1,6 @@
 import Color from "color";
-import { Exclude, Type } from "class-transformer";
-import { Allow, IsArray, IsOptional, IsString, ValidateNested } from "class-validator";
+import { Type } from "class-transformer";
+import { Allow, IsOptional, IsString, ValidateNested } from "class-validator";
 
 import { StashTabBase } from "../../../shared/stashes";
 
@@ -13,7 +13,6 @@ import { StashTabMetadata } from "./models";
  */
 export class OAuthStashTab extends StashTabBase {
   @Allow()
-  @Exclude()
   protected _league = "";
 
   @ValidateNested()
@@ -25,14 +24,16 @@ export class OAuthStashTab extends StashTabBase {
   // parent ID
   public parent?: string;
 
-  @IsOptional()
-  @IsArray()
-  @ValidateNested({ each: true })
   @Type(() => OAuthStashTab)
   public children?: OAuthStashTab[];
 
   public set league(league: string) {
     this._league = league;
+    if (this.children) {
+      for (const child of this.children) {
+        child.league = league;
+      }
+    }
   }
 
   public override get Color(): Color {
@@ -40,12 +41,7 @@ export class OAuthStashTab extends StashTabBase {
   }
 
   public override async update(): Promise<void> {
-    let tab: StashTabBase;
-    if (this.parent) {
-      tab = await Stashes.getStashTab(this._league, this.parent, this.id);
-    } else {
-      tab = await Stashes.getStashTab(this._league, this.id);
-    }
+    const tab = await Stashes.getStashTab(this._league, this.id);
     Object.assign(this, tab);
   }
 }
