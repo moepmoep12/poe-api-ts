@@ -1,0 +1,49 @@
+{
+  "entries": [
+    {
+      "name": "48 Hr Flashback Solo (MDC101b)",
+      "trophies": [
+        {
+          "description": "2nd Witch",
+          "points": 6
+        },
+        {
+          "description": "Reached at least Level 90",
+          "points": 115
+        }
+      ],
+      "points": 121,
+      "pvp": false,
+      "rank": 1
+    },
+    {
+      "name": "Medallion (MDS087b)",
+      "trophies": [
+        {
+          "description": "1st Scion",
+          "points": 10
+        },
+        {
+          "description": "Reached at least Level 22",
+          "points": 10
+        }
+      ],
+      "points": 20,
+      "pvp": false,
+      "rank": 4
+    },
+    {
+      "name": "Onslaught Cutthroat (MDC123)",
+      "trophies": [
+        {
+          "description": "1st Witch",
+          "points": 10
+        }
+      ],
+      "points": 10,
+      "pvp": false,
+      "rank": 0
+    }
+  ],
+  "total": 312
+}

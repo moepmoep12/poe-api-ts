@@ -1,0 +1,352 @@
+[
+  {
+    "name": "Crato_LegacySRS",
+    "league": "Standard",
+    "classId": 3,
+    "ascendancyClass": 3,
+    "class": "Necromancer",
+    "level": 92,
+    "experience": 2288735899,
+    "pinnable": false
+  },
+  {
+    "name": "Crato_SoulStrike",
+    "league": "Standard",
+    "classId": 2,
+    "ascendancyClass": 3,
+    "class": "Pathfinder",
+    "level": 95,
+    "experience": 3054760497,
+    "pinnable": false
+  },
+  {
+    "name": "CratoBlightLA",
+    "league": "Standard",
+    "classId": 2,
+    "ascendancyClass": 2,
+    "class": "Deadeye",
+    "level": 97,
+    "experience": 3377406541,
+    "pinnable": false
+  },
+  {
+    "name": "CratoBV",
+    "league": "Standard",
+    "classId": 3,
+    "ascendancyClass": 2,
+    "class": "Elementalist",
+    "level": 92,
+    "experience": 2311017203,
+    "pinnable": false
+  },
+  {
+    "name": "CratoCfArch",
+    "league": "Standard",
+    "classId": 4,
+    "ascendancyClass": 2,
+    "class": "Gladiator",
+    "level": 97,
+    "experience": 3373549961,
+    "pinnable": false
+  },
+  {
+    "name": "CratoCfScg",
+    "league": "Standard",
+    "classId": 4,
+    "ascendancyClass": 2,
+    "class": "Gladiator",
+    "level": 97,
+    "experience": 3584434257,
+    "pinnable": false
+  },
+  {
+    "name": "Cratocharge",
+    "league": "Standard",
+    "classId": 4,
+    "ascendancyClass": 1,
+    "class": "Slayer",
+    "level": 91,
+    "experience": 2110547991,
+    "pinnable": false
+  },
+  {
+    "name": "CratoFPExp",
+    "league": "Standard",
+    "classId": 5,
+    "ascendancyClass": 2,
+    "class": "Hierophant",
+    "level": 95,
+    "experience": 2876367173,
+    "pinnable": false
+  },
+  {
+    "name": "CratoFpScg",
+    "league": "Standard",
+    "classId": 5,
+    "ascendancyClass": 2,
+    "class": "Hierophant",
+    "level": 93,
+    "experience": 2455965650,
+    "pinnable": false
+  },
+  {
+    "name": "CratoHeistKb",
+    "league": "Standard",
+    "classId": 6,
+    "ascendancyClass": 1,
+    "class": "Assassin",
+    "level": 98,
+    "experience": 3638186694,
+    "pinnable": false
+  },
+  {
+    "name": "CratoHeraldDelirium",
+    "league": "Standard",
+    "classId": 5,
+    "ascendancyClass": 3,
+    "class": "Guardian",
+    "level": 90,
+    "experience": 1935948608,
+    "pinnable": false
+  },
+  {
+    "name": "CratoIntScg",
+    "league": "Standard",
+    "classId": 3,
+    "ascendancyClass": 1,
+    "class": "Occultist",
+    "level": 94,
+    "experience": 2848222054,
+    "pinnable": false
+  },
+  {
+    "name": "CratoKbInt_Exp",
+    "league": "Standard",
+    "classId": 3,
+    "ascendancyClass": 1,
+    "class": "Occultist",
+    "level": 100,
+    "experience": 4250334444,
+    "pinnable": false
+  },
+  {
+    "name": "CratoKineticBST",
+    "league": "Standard",
+    "classId": 2,
+    "ascendancyClass": 3,
+    "class": "Pathfinder",
+    "level": 96,
+    "experience": 3202120433,
+    "pinnable": false
+  },
+  {
+    "name": "CratoLab",
+    "league": "Standard",
+    "classId": 1,
+    "ascendancyClass": 1,
+    "class": "Juggernaut",
+    "level": 93,
+    "experience": 2455921256,
+    "pinnable": false
+  },
+  {
+    "name": "CratoLacDelirium",
+    "league": "Standard",
+    "classId": 4,
+    "ascendancyClass": 3,
+    "class": "Champion",
+    "level": 95,
+    "experience": 2991567412,
+    "pinnable": false
+  },
+  {
+    "name": "CratoLSArch",
+    "league": "Standard",
+    "classId": 2,
+    "ascendancyClass": 1,
+    "class": "Raider",
+    "level": 100,
+    "experience": 4250334444,
+    "pinnable": false
+  },
+  {
+    "name": "CratoMaroDelve",
+    "league": "Standard",
+    "classId": 1,
+    "ascendancyClass": 1,
+    "class": "Juggernaut",
+    "level": 95,
+    "experience": 2890725470,
+    "pinnable": false
+  },
+  {
+    "name": "CratoMoltenIC",
+    "league": "Standard",
+    "classId": 1,
+    "ascendancyClass": 1,
+    "class": "Juggernaut",
+    "level": 94,
+    "experience": 2690895402,
+    "pinnable": false
+  },
+  {
+    "name": "CratoPalmHeist",
+    "league": "Standard",
+    "classId": 2,
+    "ascendancyClass": 1,
+    "class": "Raider",
+    "level": 82,
+    "experience": 1058152580,
+    "pinnable": false
+  },
+  {
+    "name": "CratoPoetsDelve",
+    "league": "Standard",
+    "classId": 3,
+    "ascendancyClass": 2,
+    "class": "Elementalist",
+    "level": 92,
+    "experience": 2268549086,
+    "pinnable": false
+  },
+  {
+    "name": "CratoPoisonBlight",
+    "league": "Standard",
+    "classId": 6,
+    "ascendancyClass": 1,
+    "class": "Assassin",
+    "level": 91,
+    "experience": 2169004176,
+    "pinnable": false
+  },
+  {
+    "name": "CratoRaider_Exp",
+    "league": "Standard",
+    "classId": 2,
+    "ascendancyClass": 1,
+    "class": "Raider",
+    "level": 96,
+    "experience": 3121240882,
+    "pinnable": false
+  },
+  {
+    "name": "CratoSBDelirium",
+    "league": "Standard",
+    "classId": 5,
+    "ascendancyClass": 2,
+    "class": "Hierophant",
+    "level": 98,
+    "experience": 3677352461,
+    "pinnable": false
+  },
+  {
+    "name": "CratoScionArch",
+    "league": "Standard",
+    "classId": 0,
+    "ascendancyClass": 1,
+    "class": "Ascendant",
+    "level": 95,
+    "experience": 2988569726,
+    "pinnable": false
+  },
+  {
+    "name": "CratoSpectres",
+    "league": "Standard",
+    "classId": 3,
+    "ascendancyClass": 3,
+    "class": "Necromancer",
+    "level": 95,
+    "experience": 2926784148,
+    "pinnable": false
+  },
+  {
+    "name": "CratoSynthCoCIceNova",
+    "league": "Standard",
+    "classId": 6,
+    "ascendancyClass": 1,
+    "class": "Assassin",
+    "level": 92,
+    "experience": 2275615296,
+    "pinnable": false
+  },
+  {
+    "name": "CratoSynthesisSB",
+    "league": "Standard",
+    "classId": 3,
+    "ascendancyClass": 2,
+    "class": "Elementalist",
+    "level": 96,
+    "experience": 3278567371,
+    "pinnable": false
+  },
+  {
+    "name": "CratoSynthKb",
+    "league": "Standard",
+    "classId": 2,
+    "ascendancyClass": 3,
+    "class": "Pathfinder",
+    "level": 91,
+    "experience": 2121537461,
+    "pinnable": false
+  },
+  {
+    "name": "CratoSynthMoltenHowa",
+    "league": "Standard",
+    "classId": 1,
+    "ascendancyClass": 1,
+    "class": "Juggernaut",
+    "level": 85,
+    "experience": 1379348873,
+    "pinnable": false
+  },
+  {
+    "name": "CratoTRDelirium",
+    "league": "Standard",
+    "classId": 6,
+    "ascendancyClass": 2,
+    "class": "Trickster",
+    "level": 93,
+    "experience": 2493916928,
+    "pinnable": false
+  },
+  {
+    "name": "CratoTRHeist",
+    "league": "Standard",
+    "classId": 6,
+    "ascendancyClass": 2,
+    "class": "Trickster",
+    "level": 95,
+    "experience": 2876116901,
+    "pinnable": false
+  },
+  {
+    "name": "Cratotrick",
+    "league": "Standard",
+    "classId": 6,
+    "ascendancyClass": 2,
+    "class": "Trickster",
+    "level": 85,
+    "experience": 1381656968,
+    "pinnable": false
+  },
+  {
+    "name": "LegFlameBlast",
+    "league": "Standard",
+    "classId": 5,
+    "ascendancyClass": 1,
+    "class": "Inquisitor",
+    "level": 94,
+    "experience": 2658074992,
+    "pinnable": false
+  },
+  {
+    "name": "MFVortex",
+    "league": "Standard",
+    "classId": 6,
+    "ascendancyClass": 1,
+    "class": "Assassin",
+    "level": 89,
+    "experience": 1838448589,
+    "pinnable": false
+  }
+]

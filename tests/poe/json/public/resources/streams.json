@@ -1,0 +1,28 @@
+{
+  "streams": [
+    {
+      "name": "CasiePoE",
+      "image": "https://static-cdn.jtvnw.net/previews-ttv/live_user_casiepoe-320x180.jpg",
+      "status": "[SSF] Deep delve",
+      "viewers": 165,
+      "id": "265888642",
+      "url": "https://twitch.tv/casiepoe"
+    },
+    {
+      "name": "Legi1",
+      "image": "https://static-cdn.jtvnw.net/previews-ttv/live_user_legi1-320x180.jpg",
+      "status": "[SSF] Heist runner online, let's find some +1s before jauntlet",
+      "viewers": 134,
+      "id": "52634045",
+      "url": "https://twitch.tv/legi1"
+    },
+    {
+      "name": "JamesBelton",
+      "image": "https://static-cdn.jtvnw.net/previews-ttv/live_user_jamesbelton-320x180.jpg",
+      "status": "[Belton] Making 100-200+ex a day. Recombs are king! Hit a 920 tacati spine !bow. !build !guildcharter",
+      "viewers": 24,
+      "id": "55863609",
+      "url": "https://twitch.tv/jamesbelton"
+    }
+  ]
+}

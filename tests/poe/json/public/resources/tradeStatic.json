@@ -1,0 +1,446 @@
+{
+  "result": [
+    {
+      "id": "Currency",
+      "label": "Currency",
+      "entries": [
+        {
+          "id": "stacked-deck",
+          "text": "Stacked Deck",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvRGl2aW5hdGlvbi9EZWNrIiwic2NhbGUiOjF9XQ/8e83aea79a/Deck.png"
+        }
+      ]
+    },
+    {
+      "id": "Splinters",
+      "label": "Shards & Splinters",
+      "entries": [
+        {
+          "id": "ritual-splinter",
+          "text": "Ritual Splinter",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvUml0dWFsL1JpdHVhbFNwbGludGVyIiwic2NhbGUiOjF9XQ/702c7441d8/RitualSplinter.png"
+        }
+      ]
+    },
+    {
+      "id": "Fragments",
+      "label": "Fragments & Sets",
+      "entries": [
+        {
+          "id": "divine-vessel",
+          "text": "Divine Vessel",
+          "image": "/gen/image/WzI4LDE0LHsiZiI6IjJESXRlbXMvTWFwcy9TaW5GbGFza0VtcHR5Iiwic2NhbGUiOjF9XQ/3a2d49608a/SinFlaskEmpty.png"
+        }
+      ]
+    },
+    {
+      "id": "Sentinel",
+      "label": "Sentinel Currency",
+      "entries": [
+        {
+          "id": "jewellery-recombinator",
+          "text": "Jewellery Recombinator",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2VudGluZWwvV2VhcG9uUmVjb21iaW5hdG9yIiwic2NhbGUiOjF9XQ/7c0c016434/WeaponRecombinator.png"
+        }
+      ]
+    },
+    {
+      "id": "EldritchCurrency",
+      "label": "Eldritch Currency",
+      "entries": [
+        {
+          "id": "orb-of-conflict",
+          "text": "Orb of Conflict",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ29uZmxpY3RPcmJSYW5rMSIsInNjYWxlIjoxfV0/7e02c990fc/ConflictOrbRank1.png"
+        }
+      ]
+    },
+    {
+      "id": "ScoutingReport",
+      "label": "Scouting Reports",
+      "entries": [
+        {
+          "id": "explorers-scouting-report",
+          "text": "Explorer's Scouting Report"
+        }
+      ]
+    },
+    {
+      "id": "TaintedCurrency",
+      "label": "Tainted Currency",
+      "entries": [
+        {
+          "id": "tainted-blessing",
+          "text": "Tainted Blessing",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvVGFpbnRlZEJsZXNzaW5nIiwic2NhbGUiOjF9XQ/7cf83fcaa8/TaintedBlessing.png"
+        }
+      ]
+    },
+    {
+      "id": "Expedition",
+      "label": "Expedition Currency",
+      "entries": [
+        {
+          "id": "astragali",
+          "text": "Astragali",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRXhwZWRpdGlvbi9HYW1ibGVyUmVmcmVzaEN1cnJlbmN5Iiwic2NhbGUiOjF9XQ/ff5640db4c/GamblerRefreshCurrency.png"
+        },
+        {
+          "id": "exotic-coinage",
+          "text": "Exotic Coinage",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRXhwZWRpdGlvbi9CYXJ0ZXJSZWZyZXNoQ3VycmVuY3kiLCJzY2FsZSI6MX1d/0542d74d3c/BarterRefreshCurrency.png"
+        },
+        {
+          "id": "scrap-metal",
+          "text": "Scrap Metal",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRXhwZWRpdGlvbi9EZWFsZXJSZWZyZXNoQ3VycmVuY3kiLCJzY2FsZSI6MX1d/7c2be64768/DealerRefreshCurrency.png"
+        },
+        {
+          "id": "burial-medallion",
+          "text": "Burial Medallion",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRXhwZWRpdGlvbi9EYW5uaWdSZXJvbGxDdXJyZW5jeSIsInNjYWxlIjoxfV0/58eed604a2/DannigRerollCurrency.png"
+        }
+      ]
+    },
+    {
+      "id": "DeliriumOrbs",
+      "label": "Delirium Orbs",
+      "entries": [
+        {
+          "id": "blighted-delirium-orb",
+          "text": "Blighted Delirium Orb",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsaXJpdW0vRGVsaXJpdW1PcmJCbGlnaHQiLCJzY2FsZSI6MX1d/e65965e8bd/DeliriumOrbBlight.png"
+        },
+        {
+          "id": "amorphous-delirium-orb",
+          "text": "Amorphous Delirium Orb",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsaXJpdW0vRGVsaXJpdW1PcmJNZXRhbW9ycGgiLCJzY2FsZSI6MX1d/cab9243458/DeliriumOrbMetamorph.png"
+        }
+      ]
+    },
+    {
+      "id": "Catalysts",
+      "label": "Catalysts",
+      "entries": [
+        {
+          "id": "accelerating-catalyst",
+          "text": "Accelerating Catalyst",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2F0YWx5c3RzL1NwZWVkTW9kaWZpZXJDYXRhbHlzdCIsInNjYWxlIjoxfV0/6493f34e78/SpeedModifierCatalyst.png"
+        },
+        {
+          "id": "unstable-catalyst",
+          "text": "Unstable Catalyst",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvQ2F0YWx5c3RzL0NyaXRpY2FsTW9kaWZpZXJDYXRhbHlzdCIsInNjYWxlIjoxfV0/eebe548a38/CriticalModifierCatalyst.png"
+        }
+      ]
+    },
+    {
+      "id": "Oils",
+      "label": "Oils & Extractor",
+      "entries": [
+        {
+          "id": "tainted-oil",
+          "text": "Tainted Oil",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9WYWFsT2lsIiwic2NhbGUiOjF9XQ/ac4ceb0430/VaalOil.png"
+        },
+        {
+          "id": "oil-extractor",
+          "text": "Oil Extractor",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvT2lscy9JY2hvckV4dHJhY3RvciIsInNjYWxlIjoxfV0/e020224caf/IchorExtractor.png"
+        }
+      ]
+    },
+    {
+      "id": "Incubators",
+      "label": "Incubators",
+      "entries": [
+        {
+          "id": "morphing-incubator",
+          "text": "Morphing Incubator",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSW5jdWJhdGlvbi9JbmN1YmF0aW9uTWV0YW1vcnBoIiwic2NhbGUiOjF9XQ/63ede4e56f/IncubationMetamorph.png"
+        },
+        {
+          "id": "maddening-incubator",
+          "text": "Maddening Incubator",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvSW5jdWJhdGlvbi9JbmN1YmF0aW9uRGVsaXJpdW0iLCJzY2FsZSI6MX1d/74f49a934c/IncubationDelirium.png"
+        }
+      ]
+    },
+    {
+      "id": "Scarabs",
+      "label": "Scarabs",
+      "entries": [
+        {
+          "id": "gilded-abyss-scarab",
+          "text": "Gilded Abyss Scarab",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQWJ5c3MiLCJzY2FsZSI6MX1d/84851bd122/GreaterScarabAbyss.png"
+        },
+        {
+          "id": "winged-abyss-scarab",
+          "text": "Winged Abyss Scarab",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkFieXNzIiwic2NhbGUiOjF9XQ/c1d1da69d6/Tier4ScarabAbyss.png"
+        }
+      ]
+    },
+    {
+      "id": "DelveResonators",
+      "label": "Delve Resonators",
+      "entries": [
+        {
+          "id": "primitive-chaotic-resonator",
+          "text": "Primitive Chaotic Resonator",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvUmVyb2xsMXgxQSIsInNjYWxlIjoxfV0/9c7dcd6158/Reroll1x1A.png"
+        },
+        {
+          "id": "potent-chaotic-resonator",
+          "text": "Potent Chaotic Resonator",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvUmVyb2xsMngxQSIsInNjYWxlIjoxfV0/bee1bcfe36/Reroll2x1A.png"
+        },
+        {
+          "id": "powerful-chaotic-resonator",
+          "text": "Powerful Chaotic Resonator",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvUmVyb2xsMngyQSIsInNjYWxlIjoxfV0/80b90b6b94/Reroll2x2A.png"
+        },
+        {
+          "id": "prime-chaotic-resonator",
+          "text": "Prime Chaotic Resonator",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvUmVyb2xsMngyQyIsInNjYWxlIjoxfV0/c624d45072/Reroll2x2C.png"
+        }
+      ]
+    },
+    {
+      "id": "DelveFossils",
+      "label": "Delve Fossils",
+      "entries": [
+        {
+          "id": "sanctified-fossil",
+          "text": "Sanctified Fossil",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvR2lsZGVkRm9zc2lsIiwic2NhbGUiOjF9XQ/fc2d3fdf51/GildedFossil.png"
+        },
+        {
+          "id": "gilded-fossil",
+          "text": "Gilded Fossil",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRGVsdmUvU2FuY3RpZmllZEZvc3NpbCIsInNjYWxlIjoxfV0/7240f907f2/SanctifiedFossil.png"
+        }
+      ]
+    },
+    {
+      "id": "Essences",
+      "label": "Essences",
+      "entries": [
+        {
+          "id": "essence-of-horror",
+          "text": "Essence of Horror",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRXNzZW5jZS9Ib3Jyb3IxIiwic2NhbGUiOjF9XQ/8be6722c5e/Horror1.png"
+        },
+        {
+          "id": "essence-of-delirium",
+          "text": "Essence of Delirium",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRXNzZW5jZS9NYWRuZXNzMSIsInNjYWxlIjoxfV0/e7a9b32a18/Madness1.png"
+        },
+        {
+          "id": "remnant-of-corruption",
+          "text": "Remnant of Corruption",
+          "image": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvRXNzZW5jZS9Fc3NlbmNlQ29ycnVwdCIsInNjYWxlIjoxfV0/e0e8a57a15/EssenceCorrupt.png"
+        }
+      ]
+    },
+    {
+      "id": "Cards",
+      "label": "Cards",
+      "entries": [
+        {
+          "id": "wealth-and-power",
+          "text": "Wealth and Power"
+        },
+        {
+          "id": "winters-embrace",
+          "text": "Winter's Embrace"
+        }
+      ]
+    },
+    {
+      "id": "MapsTier1",
+      "label": "Maps (Tier 1)",
+      "entries": [
+        {
+          "id": "arid-lake-map-tier-1",
+          "text": "Arid Lake Map (Tier 1)"
+        },
+        {
+          "id": "cold-river-map-tier-1",
+          "text": "Cold River Map (Tier 1)"
+        }
+      ]
+    },
+    {
+      "id": "MapsTier2",
+      "label": "Maps (Tier 2)",
+      "entries": [
+        {
+          "id": "tower-map-tier-2",
+          "text": "Tower Map (Tier 2)"
+        }
+      ]
+    },
+    {
+      "id": "MapsTier3",
+      "label": "Maps (Tier 3)",
+      "entries": [
+        {
+          "id": "reef-map-tier-3",
+          "text": "Reef Map (Tier 3)"
+        },
+        {
+          "id": "volcano-map-tier-3",
+          "text": "Volcano Map (Tier 3)"
+        }
+      ]
+    },
+    {
+      "id": "MapsTier4",
+      "label": "Maps (Tier 4)",
+      "entries": [
+        {
+          "id": "temple-map-tier-4",
+          "text": "Temple Map (Tier 4)"
+        },
+        {
+          "id": "underground-sea-map-tier-4",
+          "text": "Underground Sea Map (Tier 4)"
+        }
+      ]
+    },
+    {
+      "id": "MapsTier5",
+      "label": "Maps (Tier 5)",
+      "entries": [
+        {
+          "id": "toxic-sewer-map-tier-5",
+          "text": "Toxic Sewer Map (Tier 5)"
+        },
+        {
+          "id": "tropical-island-map-tier-5",
+          "text": "Tropical Island Map (Tier 5)"
+        }
+      ]
+    },
+    {
+      "id": "MapsTier6",
+      "label": "Maps (Tier 6)",
+      "entries": [
+        {
+          "id": "summit-map-tier-6",
+          "text": "Summit Map (Tier 6)"
+        },
+        {
+          "id": "volcano-map-tier-6",
+          "text": "Volcano Map (Tier 6)"
+        }
+      ]
+    },
+    {
+      "id": "MapsTier7",
+      "label": "Maps (Tier 7)",
+      "entries": [
+        {
+          "id": "temple-map-tier-7",
+          "text": "Temple Map (Tier 7)"
+        },
+        {
+          "id": "thicket-map-tier-7",
+          "text": "Thicket Map (Tier 7)"
+        }
+      ]
+    },
+    {
+      "id": "MapsTier8",
+      "label": "Maps (Tier 8)",
+      "entries": [
+        {
+          "id": "tropical-island-map-tier-8",
+          "text": "Tropical Island Map (Tier 8)"
+        },
+        {
+          "id": "underground-sea-map-tier-8",
+          "text": "Underground Sea Map (Tier 8)"
+        }
+      ]
+    },
+    {
+      "id": "MapsTier9",
+      "label": "Maps (Tier 9)",
+      "entries": [
+        {
+          "id": "summit-map-tier-9",
+          "text": "Summit Map (Tier 9)"
+        },
+        {
+          "id": "tower-map-tier-9",
+          "text": "Tower Map (Tier 9)"
+        }
+      ]
+    },
+    {
+      "id": "MapsTier10",
+      "label": "Maps (Tier 10)",
+      "entries": [
+        {
+          "id": "volcano-map-tier-10",
+          "text": "Volcano Map (Tier 10)"
+        },
+        {
+          "id": "waste-pool-map-tier-10",
+          "text": "Waste Pool Map (Tier 10)"
+        }
+      ]
+    },
+    {
+      "id": "MapsTier11",
+      "label": "Maps (Tier 11)",
+      "entries": [
+        {
+          "id": "villa-map-tier-11",
+          "text": "Villa Map (Tier 11)"
+        },
+        {
+          "id": "wharf-map-tier-11",
+          "text": "Wharf Map (Tier 11)"
+        }
+      ]
+    },
+    {
+      "id": "MapsTier12",
+      "label": "Maps (Tier 12)",
+      "entries": [
+        {
+          "id": "underground-sea-map-tier-12",
+          "text": "Underground Sea Map (Tier 12)"
+        },
+        {
+          "id": "vaal-pyramid-map-tier-12",
+          "text": "Vaal Pyramid Map (Tier 12)"
+        }
+      ]
+    },
+    {
+      "id": "MapsTier13",
+      "label": "Maps (Tier 13)",
+      "entries": [
+        {
+          "id": "factory-map-tier-13",
+          "text": "Factory Map (Tier 13)"
+        },
+        {
+          "id": "frozen-cabins-map-tier-13",
+          "text": "Frozen Cabins Map (Tier 13)"
+        }
+      ]
+    },
+    {
+      "id": "Misc",
+      "label": null,
+      "entries": []
+    }
+  ]
+}

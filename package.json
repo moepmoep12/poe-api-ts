@@ -1,0 +1,64 @@
+{
+  "name": "poe-apis",
+  "version": "0.1.0",
+  "description": "Tools & Utilities for accessing the official Path of Exile APIs and thirdparty APIs",
+  "scripts": {
+    "build": "tsc",
+    "test": "dotenv -e .env mocha",
+    "test:ci": "mocha",
+    "lint": "eslint src/ tests/",
+    "prettier": "prettier --write \"**/*.ts\""
+  },
+  "keywords": [
+    "Typescript",
+    "Path of Exile",
+    "poe",
+    "API"
+  ],
+  "author": {
+    "name": "Andreas Schmidt",
+    "email": "moepmoep12@gmail.com"
+  },
+  "license": "MIT",
+  "repository": "git://github.com:moepmoep12/poe-api-ts.git",
+  "devDependencies": {
+    "@types/chai": "^4.3.1",
+    "@types/chai-as-promised": "^7.1.5",
+    "@types/color": "^3.0.3",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^17.0.33",
+    "@types/validator": "^13.7.4",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "class-validator": "^0.13.2",
+    "class-validator-flat-formatter": "^3.0.1",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.1",
+    "dotenv-cli": "^6.0.0",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "mocha": "^10.0.0",
+    "mocha-steps": "^1.3.0",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4",
+    "validator": "^13.7.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "class-transformer": "^0.5.1",
+    "color": "^4.2.3",
+    "reflect-metadata": "^0.1.13"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "./dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,379 @@
+{
+  "result": [
+    {
+      "label": "Pseudo",
+      "entries": [
+        {
+          "id": "pseudo.pseudo_total_chaos_resistance",
+          "text": "+#% total to Chaos Resistance",
+          "type": "pseudo"
+        },
+
+        {
+          "id": "pseudo.pseudo_temple_legion_3",
+          "text": "Has Room: Hall of Legends (Tier 3)",
+          "type": "pseudo",
+          "option": {
+            "options": [
+              {
+                "id": 1,
+                "text": "Open Room"
+              },
+              {
+                "id": 2,
+                "text": "Closed Room"
+              }
+            ]
+          }
+        },
+
+        {
+          "id": "pseudo.pseudo_logbook_area_volcano",
+          "text": "Has Logbook Area: Volcanic Island",
+          "type": "pseudo"
+        }
+      ]
+    },
+    {
+      "label": "Explicit",
+      "entries": [
+        {
+          "id": "explicit.stat_2422708892",
+          "text": "Passives in Radius of # can be Allocated\nwithout being connected to your tree",
+          "type": "explicit",
+          "option": {
+            "options": [
+              {
+                "id": 18663,
+                "text": "Minion Instability"
+              },
+              {
+                "id": 23540,
+                "text": "Conduit"
+              },
+              {
+                "id": 54307,
+                "text": "Acrobatics"
+              },
+              {
+                "id": 10661,
+                "text": "Iron Reflexes"
+              },
+              {
+                "id": 31961,
+                "text": "Resolute Technique"
+              },
+              {
+                "id": 40907,
+                "text": "Unwavering Stance"
+              },
+              {
+                "id": 11455,
+                "text": "Chaos Inoculation"
+              },
+              {
+                "id": 56075,
+                "text": "Eldritch Battery"
+              },
+              {
+                "id": 57279,
+                "text": "Blood Magic"
+              },
+              {
+                "id": 45175,
+                "text": "Necromantic Aegis"
+              },
+              {
+                "id": 31703,
+                "text": "Pain Attunement"
+              },
+              {
+                "id": 39085,
+                "text": "Elemental Equilibrium"
+              },
+              {
+                "id": 12926,
+                "text": "Iron Grip"
+              },
+              {
+                "id": 42178,
+                "text": "Point Blank"
+              },
+              {
+                "id": 54922,
+                "text": "Arrow Dancing"
+              },
+              {
+                "id": 41970,
+                "text": "Ancestral Bond"
+              },
+              {
+                "id": 24426,
+                "text": "Ghost Reaver"
+              },
+              {
+                "id": 10808,
+                "text": "Vaal Pact"
+              },
+              {
+                "id": 63425,
+                "text": "Zealot's Oath"
+              },
+              {
+                "id": 44941,
+                "text": "Avatar of Fire"
+              },
+              {
+                "id": 34098,
+                "text": "Mind Over Matter"
+              },
+              {
+                "id": 22088,
+                "text": "Elemental Overload"
+              },
+              {
+                "id": 23407,
+                "text": "Perfect Agony"
+              },
+              {
+                "id": 17818,
+                "text": "Crimson Dance"
+              },
+              {
+                "id": 42343,
+                "text": "Runebinder"
+              },
+              {
+                "id": 23950,
+                "text": "Wicked Ward"
+              },
+              {
+                "id": 23090,
+                "text": "Call to Arms"
+              },
+              {
+                "id": 21650,
+                "text": "Eternal Youth"
+              },
+              {
+                "id": 39713,
+                "text": "Glancing Blows"
+              },
+              {
+                "id": 11239,
+                "text": "Wind Dancer"
+              },
+              {
+                "id": 19732,
+                "text": "The Agnostic"
+              },
+              {
+                "id": 49639,
+                "text": "Supreme Ego"
+              },
+              {
+                "id": 24720,
+                "text": "Imbalanced Guard"
+              },
+              {
+                "id": 57257,
+                "text": "The Impaler"
+              },
+              {
+                "id": 43988,
+                "text": "Doomsday"
+              },
+              {
+                "id": 56116,
+                "text": "Magebane"
+              },
+              {
+                "id": 50288,
+                "text": "Iron Will"
+              },
+              {
+                "id": 60247,
+                "text": "Solipsism"
+              },
+              {
+                "id": 35255,
+                "text": "Ghost Dance"
+              },
+              {
+                "id": 58556,
+                "text": "Divine Shield"
+              },
+              {
+                "id": 50679,
+                "text": "Versatile Combatant"
+              },
+              {
+                "id": 62791,
+                "text": "Lethe Shade"
+              },
+              {
+                "id": 63620,
+                "text": "Precise Technique"
+              }
+            ]
+          }
+        },
+        {
+          "id": "explicit.stat_3856820324",
+          "text": "#% chance for Orbs of Annulment to drop as 3 Orbs of Annulment instead in your Maps",
+          "type": "explicit"
+        }
+      ]
+    },
+    {
+      "label": "Implicit",
+      "entries": [
+        {
+          "id": "implicit.stat_3788235244",
+          "text": "Area has a #% chance to contain Cadiro Perandus",
+          "type": "implicit"
+        },
+        {
+          "id": "implicit.stat_49787903",
+          "text": "Area contains a Perandus Chest",
+          "type": "implicit"
+        },
+        {
+          "id": "implicit.stat_492027537",
+          "text": "#% chance to Suppress Spell Damage",
+          "type": "implicit"
+        }
+      ]
+    },
+    {
+      "label": "Fractured",
+      "entries": [
+        {
+          "id": "fractured.stat_3049760680",
+          "text": "#% chance to gain Onslaught for 3 seconds when Hit",
+          "type": "fractured"
+        },
+        {
+          "id": "fractured.stat_3324747104",
+          "text": "#% of Damage Leeched as Life while Focused",
+          "type": "fractured"
+        }
+      ]
+    },
+    {
+      "label": "Enchant",
+      "entries": [
+        {
+          "id": "enchant.stat_75100665",
+          "text": "Items found in your Identified Maps are Identified",
+          "type": "enchant"
+        },
+        {
+          "id": "enchant.stat_98212089",
+          "text": "#% increased Quantity of Items found in your Unidentified Maps",
+          "type": "enchant"
+        }
+      ]
+    },
+    {
+      "label": "Scourge",
+      "entries": [
+        {
+          "id": "scourge.stat_3295179224",
+          "text": "Enemies you Kill have a #% chance to Explode, dealing a tenth of their maximum Life as Physical Damage",
+          "type": "scourge"
+        },
+        {
+          "id": "scourge.stat_1578737937",
+          "text": "Attack Projectiles Return to you from final Target",
+          "type": "scourge"
+        },
+        {
+          "id": "scourge.stat_3464380325",
+          "text": "Projectiles Split towards # targets",
+          "type": "scourge"
+        }
+      ]
+    },
+    {
+      "label": "Crafted",
+      "entries": [
+        {
+          "id": "crafted.stat_238314698",
+          "text": "Cannot roll Modifiers with Required Level above #",
+          "type": "crafted"
+        },
+        {
+          "id": "crafted.stat_2362265695",
+          "text": "#% chance to Avoid being Knocked Back",
+          "type": "crafted"
+        },
+        {
+          "id": "crafted.stat_492027537",
+          "text": "#% chance to Suppress Spell Damage",
+          "type": "crafted"
+        }
+      ]
+    },
+    {
+      "label": "Veiled",
+      "entries": [
+        {
+          "id": "veiled.mod_38872",
+          "text": "Gravicius' Veiled",
+          "type": "veiled"
+        },
+        {
+          "id": "veiled.mod_8541",
+          "text": "Tora's Veiled",
+          "type": "veiled"
+        }
+      ]
+    },
+    {
+      "label": "Monster",
+      "entries": [
+        {
+          "id": "monster.metamorph_reward_resonator",
+          "text": "Drops a Resonator (×#)",
+          "type": "monster"
+        },
+        {
+          "id": "monster.metamorph_reward_abyss_unique",
+          "text": "Drops an Abyss Unique Item (×#)",
+          "type": "monster"
+        }
+      ]
+    },
+    {
+      "label": "Delve",
+      "entries": [
+        {
+          "id": "delve.delve_more_aura",
+          "text": "More Aura modifiers",
+          "type": "delve"
+        },
+        {
+          "id": "delve.delve_more_ailment",
+          "text": "More Ailment modifiers",
+          "type": "delve"
+        }
+      ]
+    },
+    {
+      "label": "Ultimatum",
+      "entries": [
+        {
+          "id": "ultimatum.umod_65051",
+          "text": "Occasional Impotence",
+          "type": "ultimatum"
+        },
+        {
+          "id": "ultimatum.umod_21966",
+          "text": "Siphoned Charges",
+          "type": "ultimatum"
+        }
+      ]
+    }
+  ]
+}
