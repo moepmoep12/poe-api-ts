@@ -13,7 +13,8 @@ import { APIError, ErrorMessage } from "../../../src/poe/errors";
 
 import { Accounts, Stashes } from "../../../src/poe/apis/session";
 
-import { SessionStash, SessionStashTab } from "../../../src/poe/apis/session/stashes";
+import { SessionStash } from "../../../src/poe/apis/session/stashes/Stash";
+import { SessionStashTab } from "../../../src/poe/apis/session/stashes/StashTab";
 
 describe("Path of Exile - SessionAPI - Stashes", function () {
   this.timeout(20000);
