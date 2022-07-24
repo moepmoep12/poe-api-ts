@@ -21,7 +21,7 @@
     "email": "moepmoep12@gmail.com"
   },
   "license": "MIT",
-  "repository": "git://github.com:moepmoep12/poe-api-ts.git",
+  "repository": "git://github.com/moepmoep12/poe-api-ts.git",
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/commit-analyzer": "^9.0.2",
