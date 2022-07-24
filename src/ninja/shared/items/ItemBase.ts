@@ -62,7 +62,7 @@ export class ItemBase extends Transformable {
 
   @IsInt()
   @Min(0)
-  listingCount!: number;
+  listingCount = 0;
 
   @IsString()
   icon = "";
