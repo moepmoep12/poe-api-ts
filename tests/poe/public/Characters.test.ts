@@ -115,5 +115,9 @@ describe("Path of Exile - PublicAPI - Characters", function () {
         else throw error;
       }
     });
+
+    step(`result.updateInventory() - should be fulfilled`, async () => {
+      await expect(char.updateInventory()).to.be.fulfilled;
+    });
   });
 });
