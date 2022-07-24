@@ -1,6 +1,9 @@
 import { ValidationError } from "class-validator";
 import { validationErrorsAsString } from "class-validator-flat-formatter";
 
+/**
+ * Wraps multiple ValidationError such that all errors are reported on testing
+ */
 export class ValidationErrorExt extends ValidationError implements Error {
   constructor(public errors: ValidationError[]) {
     super();

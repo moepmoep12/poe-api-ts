@@ -14,6 +14,9 @@ import { SessionStash } from "./Stash";
  * @remarks
  * Requires [[Settings.sessionId]] to be set.
  *
+ * @remarks
+ * Does not include the items of the stash tabs. Use `getStashTabsItems` instead.
+ *
  *
  * @endpoint https://www.pathofexile.com/character-window/get-stash-items
  * @param accountName
@@ -30,7 +33,7 @@ export const getStash = async (
     accountName,
     league,
     tabs: "1",
-    tabIndex: "1",
+    tabIndex: "0",
   });
   const stash = await requestTransformed(SessionStash, url);
   for (const tab of stash.tabs) {
