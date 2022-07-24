@@ -1,6 +1,6 @@
 export abstract class Settings {
   /**
-   * The POESESSID which is used as a cookie
+   * The POESESSID cookie
    */
   public static sessionId: string;
   /**

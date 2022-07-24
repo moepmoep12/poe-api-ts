@@ -55,7 +55,7 @@ export class PublicCharacter extends PublicCharacterBase implements Character {
   async updateInventory(
     replace?: boolean | undefined
   ): Promise<[inventory: InventoryItem[], equipment: InventoryItem[]]> {
-    const items = await API.getItems(this.accountName, this.name);
+    const items = await API.getItems(this._accountName, this.name);
     const equipment: InventoryItem[] = [];
     const inventory: InventoryItem[] = [];
 
@@ -76,7 +76,7 @@ export class PublicCharacter extends PublicCharacterBase implements Character {
   async updatePassives(
     replace?: boolean | undefined
   ): Promise<[passives: Passives, jewels: InventoryItem[]]> {
-    const passives = await API.getPassives(this.accountName, this.name);
+    const passives = await API.getPassives(this._accountName, this.name);
     if (replace) {
       this.passives = passives;
       this.jewels = passives.jewels;

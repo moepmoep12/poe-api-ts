@@ -1,4 +1,4 @@
-import { instanceToPlain, plainToInstance } from "class-transformer";
+import { plainToInstance } from "class-transformer";
 
 import {
   buildURL,
@@ -38,12 +38,9 @@ export const getStash = async (leagueId: string): Promise<Stash<StashTabBase>> =
   for (const tab of tabs) {
     tab.league = leagueId;
   }
-  const stash: OAuthStash = {
+  const stash: Partial<OAuthStash> = {
     numTabs: tabs.length,
     tabs: tabs,
-    toPlain: function (): unknown {
-      return instanceToPlain(this);
-    },
   };
   return plainToInstance(OAuthStash, stash);
 };
@@ -56,7 +53,7 @@ export const getStash = async (leagueId: string): Promise<Stash<StashTabBase>> =
  * @endpoint https://api.pathofexile.com/stash/:league/:stashID/[:subStashID]
  * @param leagueId The ID of the league, e.g. 'Standard'
  * @param stashID The ID of the stash tab
- * @param subStashID Optional.
+ * @param subStashId Optional.
  * @throws [[APIError]]
  */
 export const getStashTab = async (

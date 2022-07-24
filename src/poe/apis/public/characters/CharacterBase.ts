@@ -11,7 +11,7 @@ import { Exclude } from "class-transformer";
 export class PublicCharacterBase extends CharacterBase {
   @Allow()
   @Exclude()
-  private _accountName!: string;
+  protected _accountName!: string;
 
   public set accountName(name: string) {
     this._accountName = name;

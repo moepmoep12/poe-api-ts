@@ -1,13 +1,14 @@
 {
-  "name": "poe-apis",
-  "version": "0.1.0",
+  "name": "poe-api-ts",
+  "version": "0.0.0-development",
   "description": "Tools & Utilities for accessing the official Path of Exile APIs and thirdparty APIs",
   "scripts": {
     "build": "tsc",
     "test": "dotenv -e .env mocha",
     "test:ci": "mocha",
     "lint": "eslint src/ tests/",
-    "prettier": "prettier --write \"**/*.ts\""
+    "prettier": "prettier --write \"**/*.ts\"",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "Typescript",
@@ -22,6 +23,11 @@
   "license": "MIT",
   "repository": "git://github.com:moepmoep12/poe-api-ts.git",
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
     "@types/chai": "^4.3.1",
     "@types/chai-as-promised": "^7.1.5",
     "@types/color": "^3.0.3",
@@ -43,6 +49,7 @@
     "mocha": "^10.0.0",
     "mocha-steps": "^1.3.0",
     "prettier": "^2.7.1",
+    "semantic-release": "^19.0.3",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.4",
     "validator": "^13.7.0"
@@ -60,5 +67,26 @@
   "types": "./dist/index.d.ts",
   "publishConfig": {
     "access": "public"
+  },
+  "release": {
+    "branches": [
+      "master"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/changelog",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "message": "Release <%= nextRelease.version %> [skip ci]",
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ]
+        }
+      ]
+    ]
   }
 }

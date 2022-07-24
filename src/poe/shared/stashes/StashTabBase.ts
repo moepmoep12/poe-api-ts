@@ -1,5 +1,14 @@
 import { Type } from "class-transformer";
-import { IsArray, IsEnum, IsInt, IsNotEmpty, IsString, Min, ValidateNested } from "class-validator";
+import {
+  IsArray,
+  IsEnum,
+  IsInt,
+  IsNotEmpty,
+  IsOptional,
+  IsString,
+  Min,
+  ValidateNested,
+} from "class-validator";
 import Color from "color";
 
 import { Transformable } from "../../../common/classes/Transformable";
@@ -24,6 +33,13 @@ export abstract class StashTabBase extends Transformable {
   @IsEnum(StashType)
   public type!: StashType;
 
+  @IsOptional()
+  @IsArray()
+  @ValidateNested({ each: true })
+  @Type(() => StashTabBase)
+  public children?: StashTabBase[];
+
+  @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
   @Type(() => Item)
