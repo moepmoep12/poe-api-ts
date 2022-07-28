@@ -7,6 +7,7 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { PVPMatches, ServiceScopes } from "../../../src/poe/apis/oauth";
 
@@ -14,6 +15,8 @@ import { APIError } from "../../../src/poe/errors";
 import { ErrorMessage } from "../../../src/poe/errors/models/OAuthAPIError";
 import { OAuthPvpMatch } from "../../../src/poe/apis/oauth/pvpmatches/PvpMatch";
 import { OAuthPvpLadder } from "../../../src/poe/apis/oauth/pvpmatches/PvpLadder";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 const leagueName = "Standard";
 

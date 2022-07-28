@@ -6,9 +6,12 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { Items } from "../../../src/ninja/apis/";
 import { UniqueWeaponOverview } from "../../../src/ninja/apis/items/weapons";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe(`PoE.Ninja - Items - Unique Weapons`, function () {
   this.timeout(5000);

@@ -7,9 +7,12 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { PublicStashes } from "../../../src/poe/apis/public";
 import { PublicChunk } from "../../../src/poe/apis/public/public_stashes/Chunk";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe("Path of Exile - PublicAPI - PublicStashes", function () {
   this.timeout(30000);

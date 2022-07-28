@@ -7,10 +7,13 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../ValidationError";
 import { validatorOptions } from "../ValidatorOptions";
+import { mochaGlobalSetup } from "../mochaFixtures";
 
 import { Stats } from "../../src/ninja/apis/";
 
 import { Statistics } from "../../src/ninja/apis/stats/Statistics";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe("PoE.Ninja - Stats", function () {
   this.timeout(10000);

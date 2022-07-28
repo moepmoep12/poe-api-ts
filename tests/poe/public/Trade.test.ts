@@ -7,6 +7,7 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { Group } from "../../../src/poe/shared/trade/static";
 import { StatGroup } from "../../../src/poe/shared/trade/stats";
@@ -21,6 +22,8 @@ import {
   ExchangeResults,
 } from "../../../src/poe/shared/trade/query/exchange";
 import { FetchResult } from "../../../src/poe/shared/trade/query/fetch";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe("Path of Exile - PublicAPI - Trade", function () {
   this.timeout(50000);

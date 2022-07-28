@@ -7,6 +7,7 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { OAuthLeague } from "../../../src/poe/apis/oauth/leagues/League";
 import { Leagues, ServiceScopes } from "../../../src/poe/apis/oauth";
@@ -15,6 +16,8 @@ import { LeagueRule } from "../../../src/poe/shared/leagues";
 
 import { APIError } from "../../../src/poe/errors";
 import { ErrorMessage } from "../../../src/poe/errors/models/OAuthAPIError";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 const hasScope = process.env.SCOPES?.includes(ServiceScopes.Leagues);
 const leagueName = "Standard";

@@ -7,9 +7,12 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { MTX } from "../../../src/poe/apis/public";
 import { MTXCollection } from "../../../src/poe/apis/public/mtx";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe("Path of Exile - PublicAPI - MTX", function () {
   let result: MTXCollection;

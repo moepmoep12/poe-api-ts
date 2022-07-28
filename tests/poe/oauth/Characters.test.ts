@@ -7,6 +7,7 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { OAuthCharacterBase } from "../../../src/poe/apis/oauth/characters/CharacterBase";
 import { OAuthCharacter } from "../../../src/poe/apis/oauth/characters/Character";
@@ -14,6 +15,8 @@ import { Characters, AccountScopes } from "../../../src/poe/apis/oauth";
 
 import { APIError } from "../../../src/poe/errors";
 import { ErrorMessage } from "../../../src/poe/errors/models/OAuthAPIError";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 const scopes = <string>process.env.SCOPES;
 

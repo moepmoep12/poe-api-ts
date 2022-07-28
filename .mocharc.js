@@ -6,6 +6,7 @@ module.exports = {
   recursive: true,
   extension: [
     "ts"
-  ]
+  ],
+  "parallel": true
 };
 

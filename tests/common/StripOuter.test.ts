@@ -2,7 +2,11 @@ import "reflect-metadata";
 import "mocha";
 import { expect } from "chai";
 
+import { mochaGlobalSetup } from "../mochaFixtures";
+
 import { stripOuter } from "../../src/common/functions";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe("Common - Functions", function () {
   describe("#stripOuter()", function () {

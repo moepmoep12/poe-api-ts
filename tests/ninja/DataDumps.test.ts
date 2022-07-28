@@ -7,9 +7,12 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../ValidationError";
 import { validatorOptions } from "../ValidatorOptions";
+import { mochaGlobalSetup } from "../mochaFixtures";
 
 import { DataDumps } from "../../src/ninja/apis/";
 import { DataDump } from "../../src/ninja/apis/dumps";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe("PoE.Ninja - Data Dumps", function () {
   this.timeout(10000);

@@ -3,7 +3,11 @@ import "mocha";
 
 import { expect } from "chai";
 
+import { mochaGlobalSetup } from "../mochaFixtures";
+
 import { stripByteOrderMark } from "../../src/common/functions";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe("Common - Functions", function () {
   describe("#stripByteOrderMark()", function () {

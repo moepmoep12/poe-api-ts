@@ -6,9 +6,12 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { Items } from "../../../src/ninja/apis/";
 import { ClusterJewelOverview } from "../../../src/ninja/apis/items/clusterjewels";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe(`PoE.Ninja - Items - Cluster Jewels`, function () {
   this.timeout(5000);

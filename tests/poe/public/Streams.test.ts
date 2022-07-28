@@ -7,9 +7,12 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { Streams } from "../../../src/poe/apis/public";
 import { Stream } from "../../../src/poe/shared/streams";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe("Path of Exile - PublicAPI - Streams", function () {
   this.timeout(10000);

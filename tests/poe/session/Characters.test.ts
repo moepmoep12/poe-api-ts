@@ -7,12 +7,15 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { Characters } from "..//../../src/poe/apis/session";
 
 import { APIError, ErrorMessage } from "..//../../src/poe/errors";
 import { SessionCharacterBase } from "../../../src/poe/apis/session/characters/CharacterBase";
 import { SessionCharacter } from "../../../src/poe/apis/session/characters/Character";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe("Path of Exile - SessionAPI - Characters", function () {
   this.timeout(20000);
