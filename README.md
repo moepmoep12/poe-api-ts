@@ -1,6 +1,6 @@
 # Path of Exile API TS
 
-![NPM Version](https://img.shields.io/npm/v/npm) ![LICENSE](https://img.shields.io/github/license/moepmoep12/poe-api-ts) ![TOP LANGUAGE](https://img.shields.io/github/languages/top/moepmoep12/poe-api-ts) ![ISSUES](https://img.shields.io/github/issues/moepmoep12/poe-api-ts) ![TEST_WORKFLOW](https://img.shields.io/github/workflow/status/moepmoep12/poe-api-ts/Test)
+![NPM Version](https://img.shields.io/npm/v/npm) ![LICENSE](https://img.shields.io/github/license/moepmoep12/poe-api-ts) ![TOP LANGUAGE](https://img.shields.io/github/languages/top/moepmoep12/poe-api-ts) ![ISSUES](https://img.shields.io/github/issues/moepmoep12/poe-api-ts) ![TEST_WORKFLOW](https://img.shields.io/github/workflow/status/moepmoep12/poe-api-ts/Test) [![codecov](https://codecov.io/gh/moepmoep12/poe-api-ts/branch/master/graph/badge.svg?token=1VAJALTDMK)](https://codecov.io/gh/moepmoep12/poe-api-ts)
 
 ## Table of Contents
 
