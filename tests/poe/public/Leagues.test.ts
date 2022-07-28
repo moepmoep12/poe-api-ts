@@ -7,11 +7,14 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { Leagues } from "../../../src/poe/apis/public";
 
 import { LeagueRule } from "../../../src/poe/shared/leagues";
 import { PublicLeague } from "../../../src/poe/apis/public/leagues/League";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe("Path of Exile - PublicAPI - Leagues", function () {
   this.timeout(20000);

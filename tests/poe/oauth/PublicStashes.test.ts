@@ -7,6 +7,7 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { PublicStashes, ServiceScopes } from "../../../src/poe/apis/oauth";
 
@@ -14,6 +15,8 @@ import { OAuthChunk } from "../../../src/poe/apis/oauth/public_stashes/Chunk";
 
 import { APIError } from "../../../src/poe/errors";
 import { ErrorMessage } from "../../../src/poe/errors/models/OAuthAPIError";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 const hasScope = process.env.SCOPES?.includes(ServiceScopes.PsAPI);
 

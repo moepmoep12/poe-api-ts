@@ -8,6 +8,7 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { APIError, ErrorMessage } from "../../../src/poe/errors";
 
@@ -15,6 +16,8 @@ import { Accounts, Stashes } from "../../../src/poe/apis/session";
 
 import { SessionStash } from "../../../src/poe/apis/session/stashes/Stash";
 import { SessionStashTab } from "../../../src/poe/apis/session/stashes/StashTab";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe("Path of Exile - SessionAPI - Stashes", function () {
   this.timeout(20000);

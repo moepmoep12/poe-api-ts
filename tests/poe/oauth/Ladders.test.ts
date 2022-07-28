@@ -7,6 +7,7 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { Ladders, ServiceScopes } from "../../../src/poe/apis/oauth";
 import { OAuthLadder } from "../../../src/poe/apis/oauth/ladders/Ladder";
@@ -15,6 +16,8 @@ import { LadderCharacter } from "../../../src/poe/shared/ladders";
 
 import { APIError } from "../../../src/poe/errors";
 import { ErrorMessage } from "../../../src/poe/errors/models/OAuthAPIError";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 const hasScope = process.env.SCOPES?.includes(ServiceScopes.LeagueLadder);
 

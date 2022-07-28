@@ -7,11 +7,14 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { LadderCharacter } from "../../../src/poe/shared/ladders";
 
 import { Ladders } from "../../../src/poe/apis/public";
 import { PublicLadder } from "../../../src/poe/apis/public/ladders/Ladder";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe("Path of Exile - PublicAPI - Ladders", function () {
   this.timeout(10000);

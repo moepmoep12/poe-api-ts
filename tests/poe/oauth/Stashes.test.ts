@@ -8,6 +8,7 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { OAuthStashTab } from "../../../src/poe/apis/oauth/stashes/StashTab";
 import { OAuthStash } from "../../../src/poe/apis/oauth/stashes/Stash";
@@ -15,6 +16,8 @@ import { AccountScopes, Stashes } from "../../../src/poe/apis/oauth";
 
 import { APIError } from "../../../src/poe/errors";
 import { ErrorMessage } from "../../../src/poe/errors/models/OAuthAPIError";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 const scopes = <string>process.env.SCOPES;
 

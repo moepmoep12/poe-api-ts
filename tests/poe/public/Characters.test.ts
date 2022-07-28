@@ -7,6 +7,7 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { InventoryItem } from "../../../src/poe/shared/item";
 
@@ -14,6 +15,8 @@ import { Characters } from "../../../src/poe/apis/public";
 import { PublicPassives } from "../../../src/poe/apis/public/characters/Passives";
 import { PublicCharacterBase } from "../../../src/poe/apis/public/characters/CharacterBase";
 import { PublicCharacter } from "../../../src/poe/apis/public/characters/Character";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe("Path of Exile - PublicAPI - Characters", function () {
   this.timeout(20000);

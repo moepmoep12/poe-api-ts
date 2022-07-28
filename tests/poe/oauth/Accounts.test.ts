@@ -7,6 +7,7 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { AccountScopes, Accounts } from "../../../src/poe/apis/oauth";
 
@@ -15,9 +16,13 @@ import { Account } from "../../../src/poe/shared/accounts";
 import { APIError } from "../../../src/poe/errors";
 import { ErrorMessage } from "../../../src/poe/errors/models/OAuthAPIError";
 
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
+
 const scopes = <string>process.env.SCOPES;
 
 describe("Path of Exile - OAuthAPI - Accounts", function () {
+  console.log(process.env);
+
   this.timeout(10000);
 
   let account: Account;
@@ -33,7 +38,7 @@ describe("Path of Exile - OAuthAPI - Accounts", function () {
   }
 
   it("#getProfile() - should return profile", async () => {
-    account = <Account>await expect(Accounts.getProfile()).to.be.fulfilled;
+    account = <Account>await Accounts.getProfile();
   });
 
   step("validateOrReject(result) - should be fulfilled", async () => {

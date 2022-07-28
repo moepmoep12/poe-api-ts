@@ -6,9 +6,12 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { Items } from "../../../src/ninja/apis/";
 import { UniqueFlaskOverview } from "../../../src/ninja/apis/items/flasks";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe(`PoE.Ninja - Items - Unique Flasks`, function () {
   this.timeout(5000);

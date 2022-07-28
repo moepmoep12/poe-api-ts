@@ -7,9 +7,12 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../ValidationError";
 import { validatorOptions } from "../ValidatorOptions";
+import { mochaGlobalSetup } from "../mochaFixtures";
 
 import { Currencies } from "../../src/ninja/apis/";
 import { CurrencyOverview, CurrencyOption, History } from "../../src/ninja/apis/currency";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe("PoE.Ninja - Currency", function () {
   this.timeout(10000);

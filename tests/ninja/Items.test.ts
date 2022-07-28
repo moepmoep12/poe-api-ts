@@ -7,10 +7,13 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../ValidationError";
 import { validatorOptions } from "../ValidatorOptions";
+import { mochaGlobalSetup } from "../mochaFixtures";
 
 import { Items } from "../../src/ninja/apis/";
 import { HistoryPoint } from "../../src/ninja/shared";
 import { ItemOption } from "../../src/ninja/apis/items/models/ItemOption";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 const league = "Standard";
 

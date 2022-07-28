@@ -7,6 +7,7 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { Guilds } from "..//../../src/poe/apis/session";
 import { SessionStashHistory } from "../../../src/poe/apis/session/guild/StashHistory";
@@ -14,6 +15,8 @@ import { SessionGuild } from "../../../src/poe/apis/session/guild/Guild";
 import { SessionPointTransactions } from "../../../src/poe/apis/session/guild/PointTransactions";
 
 import { APIError, ErrorMessage } from "..//../../src/poe/errors";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe("Path of Exile - SessionAPI - Guilds", function () {
   this.timeout(20000);

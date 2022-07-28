@@ -7,10 +7,13 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { PlayerHistory, Season } from "../../../src/poe/shared/seasons";
 
 import { Seasons } from "../../../src/poe/apis/public";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe("Path of Exile - PublicAPI - Seasons", function () {
   this.timeout(10000);

@@ -15,6 +15,4 @@ export function mochaGlobalSetup(): void {
   Settings.sessionId = process.env["POESESSID"] as string;
   Settings.authorizationToken = process.env["ACCESS_TOKEN"] as string;
   Settings.serviceToken = process.env["SERVICE_TOKEN"] as string;
-
-  console.log(`Running tests with scopes: ${process.env.SCOPES as string}`);
 }

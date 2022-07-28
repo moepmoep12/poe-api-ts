@@ -7,9 +7,12 @@ import { validateOrReject, ValidationError } from "class-validator";
 
 import { ValidationErrorExt } from "../../ValidationError";
 import { validatorOptions } from "../../ValidatorOptions";
+import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { IgnoredAccounts } from "../../../src/poe/shared/trade/ignore";
 import { Trade } from "../../../src/poe/apis/session";
+
+if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
 describe("Path of Exile - SessionAPI - Trade", function () {
   this.timeout(5000);
