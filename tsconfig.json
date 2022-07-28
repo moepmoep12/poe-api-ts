@@ -12,7 +12,8 @@
     "experimentalDecorators": true,
     "resolveJsonModule": true,
     "emitDecoratorMetadata": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "inlineSourceMap": true
   },
   "exclude": ["./node_modules", "./dist", "./tests", "./libconsumer"],
   "include": ["src/**/*.ts"]
