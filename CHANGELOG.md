@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/moepmoep12/poe-api-ts/compare/v1.0.1...v1.0.2) (2022-07-28)
+
+
+### Bug Fixes
+
+* Merge pull request [#9](https://github.com/moepmoep12/poe-api-ts/issues/9) from moepmoep12/development ([7aea2e4](https://github.com/moepmoep12/poe-api-ts/commit/7aea2e477f8a378cc25183b897e7c4386f7228fd))
+
 ## [1.0.1](https://github.com/moepmoep12/poe-api-ts/compare/v1.0.0...v1.0.1) (2022-07-24)
 
 
