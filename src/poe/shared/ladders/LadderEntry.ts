@@ -13,11 +13,11 @@ export class LadderEntry extends Transformable {
   rank!: number;
 
   @ValidateNested()
-  @Type(() => LadderCharacter)
+  @Type(/* istanbul ignore next */ () => LadderCharacter)
   character!: LadderCharacter;
 
   @ValidateNested()
-  @Type(() => LadderAccount)
+  @Type(/* istanbul ignore next */ () => LadderAccount)
   account!: LadderAccount;
 
   @IsOptional()

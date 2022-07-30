@@ -15,6 +15,6 @@ export class PointTransactions extends Transformable {
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => PointTransaction)
+  @Type(/* istanbul ignore next */ () => PointTransaction)
   entries!: PointTransaction[];
 }

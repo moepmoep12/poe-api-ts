@@ -12,6 +12,6 @@ export class PlayerHistory extends Transformable {
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => PlayerResult)
+  @Type(/* istanbul ignore next */ () => PlayerResult)
   entries!: PlayerResult[];
 }

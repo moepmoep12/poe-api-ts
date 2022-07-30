@@ -10,7 +10,7 @@ export class LogbookMod {
   name!: string;
 
   @ValidateNested()
-  @Type(() => LogbookFaction)
+  @Type(/* istanbul ignore next */ () => LogbookFaction)
   faction!: LogbookFaction;
 
   @IsArray()

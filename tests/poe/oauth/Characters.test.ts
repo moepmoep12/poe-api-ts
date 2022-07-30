@@ -91,5 +91,15 @@ describe("Path of Exile - OAuthAPI - Characters", function () {
         else throw error;
       }
     });
+
+    step(`result.updateInventory() - should update inventory`, async () => {
+      await new Promise((f) => setTimeout(f, 2000));
+      await expect(char.updateInventory()).to.be.fulfilled;
+    });
+
+    step(`result.updatePassives() - should update passives`, async () => {
+      await new Promise((f) => setTimeout(f, 2000));
+      await expect(char.updatePassives()).to.be.fulfilled;
+    });
   });
 });

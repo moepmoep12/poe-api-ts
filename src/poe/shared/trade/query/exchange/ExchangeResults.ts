@@ -29,7 +29,7 @@ export class ExchangeResults extends Transformable {
 
   @ValidateNested({ each: true })
   @Expose({ name: "result" })
-  @Type(() => ExchangeResult)
+  @Type(/* istanbul ignore next */ () => ExchangeResult)
   /**
    * @overrides `result`
    */

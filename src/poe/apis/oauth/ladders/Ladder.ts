@@ -8,7 +8,12 @@ import * as API from "./API";
  */
 export class OAuthLadder extends Ladder {
   public async getNextEntries(append: boolean): Promise<OAuthLadderEntry[] | null> {
-    if (this.ladderOptions.offset == null || this.ladderOptions.limit == null) {
+    if (
+      typeof this.ladderOptions.offset != "number" ||
+      this.ladderOptions.offset < 0 ||
+      typeof this.ladderOptions.limit != "number" ||
+      this.ladderOptions.limit < 0
+    ) {
       return null;
     }
 
@@ -28,6 +33,7 @@ export class OAuthLadder extends Ladder {
 
     if (append) {
       this.entries.push(...ladder.entries);
+      this.total += ladder.entries.length;
     }
 
     return ladder.entries;

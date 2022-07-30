@@ -8,6 +8,6 @@ import { PublicLadderCharacter } from "./LadderCharacter";
  * @hidden
  */
 export class PublicLadderEntry extends LadderEntry {
-  @Type(() => PublicLadderCharacter)
+  @Type(/* istanbul ignore next */ () => PublicLadderCharacter)
   override character!: LadderCharacter;
 }

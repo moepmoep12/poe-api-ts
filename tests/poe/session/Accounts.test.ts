@@ -12,7 +12,7 @@ import { mochaGlobalSetup } from "../../mochaFixtures";
 import { APIError, ErrorMessage } from "..//../../src/poe/errors";
 
 import { Accounts } from "..//../../src/poe/apis/session";
-import { AvatarCollection, MtxGroup } from "../../../src/poe/apis/session/accounts";
+import { AvatarCollection, AvatarsOptions, MtxGroup } from "../../../src/poe/apis/session/accounts";
 import { SessionProfile } from "../../../src/poe/apis/session/accounts/Profile";
 
 if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
@@ -62,9 +62,17 @@ describe("Path of Exile - SessionAPI - Accounts", function () {
     this.timeout(3000);
 
     let avatarCollection: AvatarCollection;
+    const perPage = 16;
+    const options: AvatarsOptions = {
+      page: 1,
+      perPage: perPage,
+      custom: false,
+    };
 
-    it("#getAvatars() - should return avatars", async () => {
-      avatarCollection = <AvatarCollection>await expect(Accounts.getAvatars()).to.be.fulfilled;
+    it("#getAvatars(options) - should return avatars", async () => {
+      avatarCollection = <AvatarCollection>(
+        await expect(Accounts.getAvatars(options)).to.be.fulfilled
+      );
     });
 
     step("validateOrReject(result) - should be fulfilled", async () => {
@@ -75,6 +83,30 @@ describe("Path of Exile - SessionAPI - Accounts", function () {
           throw new ValidationErrorExt(error as ValidationError[]);
         else throw error;
       }
+    });
+
+    step(`getNextPage(true) - should return next Avatars`, async () => {
+      await expect(avatarCollection.getNextPage(true)).to.be.fulfilled;
+    });
+
+    step(`result.collection.length - should be ${2 * perPage}`, () => {
+      expect(avatarCollection.collection.length).to.be.equal(2 * perPage);
+    });
+
+    step(`result.avatarOptions.page - should be 2`, () => {
+      // @ts-expect-error protected
+      expect(avatarCollection.avatarOptions.page).to.be.equal(2);
+    });
+
+    step(`getNextPage(true) - should return null with no page`, async () => {
+      // @ts-expect-error protected
+      const origOptions = { ...avatarCollection.avatarOptions };
+      const invalidOptions: AvatarsOptions = {
+        page: 0,
+      };
+      avatarCollection.options = invalidOptions;
+      expect(await avatarCollection.getNextPage(true)).to.be.null;
+      avatarCollection.options = origOptions;
     });
   });
 

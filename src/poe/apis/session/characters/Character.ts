@@ -16,21 +16,21 @@ import * as API from "./API";
 export class SessionCharacter extends SessionCharacterBase implements Character {
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => InventoryItem)
+  @Type(/* istanbul ignore next */ () => InventoryItem)
   equipment!: InventoryItem[];
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => InventoryItem)
+  @Type(/* istanbul ignore next */ () => InventoryItem)
   inventory!: InventoryItem[];
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => InventoryItem)
+  @Type(/* istanbul ignore next */ () => InventoryItem)
   jewels!: InventoryItem[];
 
   @ValidateNested()
-  @Type(() => SessionPassives)
+  @Type(/* istanbul ignore next */ () => SessionPassives)
   passives!: Passives;
 
   constructor(items: GetItemsResponse, passives: Passives) {
@@ -67,6 +67,7 @@ export class SessionCharacter extends SessionCharacterBase implements Character 
       }
     }
 
+    /* istanbul ignore if */
     if (replace) {
       this.equipment = equipment;
       this.inventory = inventory;
@@ -77,6 +78,8 @@ export class SessionCharacter extends SessionCharacterBase implements Character 
     replace?: boolean | undefined
   ): Promise<[passives: Passives, jewels: InventoryItem[]]> {
     const passives = await API.getPassives(this.name);
+
+    /* istanbul ignore if */
     if (replace) {
       this.passives = passives;
       this.jewels = passives.jewels;

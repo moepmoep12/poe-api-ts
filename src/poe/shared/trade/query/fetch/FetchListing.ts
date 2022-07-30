@@ -6,11 +6,11 @@ import { Listing } from "../listing/Listing";
 
 export class FetchListing extends Listing {
   @ValidateNested()
-  @Type(() => ListedStash)
+  @Type(/* istanbul ignore next */ () => ListedStash)
   stash!: ListedStash;
 
   @ValidateNested()
-  @Type(() => ListedPrice)
+  @Type(/* istanbul ignore next */ () => ListedPrice)
   price!: ListedPrice;
 
   @IsString()

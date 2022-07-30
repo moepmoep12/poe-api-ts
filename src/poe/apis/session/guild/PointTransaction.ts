@@ -9,6 +9,6 @@ import { SessionProfile } from "../accounts/Profile";
  * @hidden
  */
 export class SessionPointTransaction extends PointTransaction {
-  @Type(() => SessionProfile)
+  @Type(/* istanbul ignore next */ () => SessionProfile)
   override account!: Account;
 }

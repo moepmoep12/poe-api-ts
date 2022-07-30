@@ -36,7 +36,7 @@ export abstract class LadderCharacter extends CharacterBase {
 
   @IsOptional()
   @ValidateNested()
-  @Type(() => DelveDepth)
+  @Type(/* istanbul ignore next */ () => DelveDepth)
   // deepest Delve depth completed
   depth?: DelveDepth;
 }

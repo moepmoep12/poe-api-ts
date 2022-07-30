@@ -9,9 +9,9 @@ import { OAuthPvpMatch } from "./PvpMatch";
  * @hidden
  */
 export class OAuthPvpMatchLadder extends PvpMatchLadder {
-  @Type(() => OAuthPvpMatch)
+  @Type(/* istanbul ignore next */ () => OAuthPvpMatch)
   match!: PvpMatch;
 
-  @Type(() => OAuthPvpLadder)
+  @Type(/* istanbul ignore next */ () => OAuthPvpLadder)
   ladder!: PvpLadder;
 }

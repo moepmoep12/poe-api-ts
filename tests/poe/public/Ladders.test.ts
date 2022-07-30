@@ -13,6 +13,7 @@ import { LadderCharacter } from "../../../src/poe/shared/ladders";
 
 import { Ladders } from "../../../src/poe/apis/public";
 import { PublicLadder } from "../../../src/poe/apis/public/ladders/Ladder";
+import { PublicLadderOptions } from "../../../src/poe/apis/public/ladders";
 
 if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
@@ -23,10 +24,13 @@ describe("Path of Exile - PublicAPI - Ladders", function () {
   const limit = 40;
   const filterKey: keyof LadderCharacter = "class";
   const filterValue = "Ascendant";
+  const options: PublicLadderOptions = {
+    limit: limit,
+  };
   let ladder: PublicLadder;
 
   it(`#get(${league}, { limit: ${limit}}) - should return ladder for ${league} league`, async () => {
-    ladder = <PublicLadder>await expect(Ladders.get(league, { limit: limit })).to.be.fulfilled;
+    ladder = <PublicLadder>await expect(Ladders.get(league, options)).to.be.fulfilled;
   });
 
   step("validateOrReject(result) - should be fulfilled", async () => {
@@ -66,5 +70,29 @@ describe("Path of Exile - PublicAPI - Ladders", function () {
 
   step(`ladder.entries.length - should be ${2 * limit}`, () => {
     expect(ladder.entries.length).to.be.equal(2 * limit);
+  });
+
+  step("result.getNextEntries(true) - should return null with no options", async () => {
+    // @ts-expect-error testing
+    const origOptions = { ...ladder.ladderOptions };
+    const invalidOptions = {
+      offset: -1,
+    };
+    ladder.options = invalidOptions;
+    const result = <null>await expect(ladder.getNextEntries(true)).to.be.fulfilled;
+    ladder.options = origOptions;
+    expect(result).to.be.null;
+  });
+
+  step("result.getNextEntries(true) - should return null with exceeding offset", async () => {
+    // @ts-expect-error testing
+    const origOptions = { ...ladder.ladderOptions };
+    const invalidOptions = {
+      offset: 9999999,
+    };
+    ladder.options = invalidOptions;
+    const result = <null>await expect(ladder.getNextEntries(true)).to.be.fulfilled;
+    ladder.options = origOptions;
+    expect(result).to.be.null;
   });
 });

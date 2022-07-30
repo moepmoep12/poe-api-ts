@@ -18,11 +18,11 @@ export abstract class Entry {
   id!: number;
 
   @IsDate()
-  @Type(() => Date)
+  @Type(/* istanbul ignore next */ () => Date)
   startAt!: Date;
 
   @IsDate()
-  @Type(() => Date)
+  @Type(/* istanbul ignore next */ () => Date)
   endAt!: Date;
 
   @IsNotEmpty()
@@ -55,7 +55,7 @@ export abstract class Entry {
   platform!: string | null;
 
   @ValidateNested()
-  @Type(() => Microtransaction)
+  @Type(/* istanbul ignore next */ () => Microtransaction)
   microtransaction!: Microtransaction;
 
   @IsOptional()

@@ -45,7 +45,7 @@ export class Exchange extends Transformable {
    */
   @IsDate()
   @Expose({ name: "sample_time_utc" })
-  @Type(() => Date)
+  @Type(/* istanbul ignore next */ () => Date)
   sampleTime!: Date;
 
   /**

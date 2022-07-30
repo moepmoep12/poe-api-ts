@@ -9,6 +9,6 @@ import { SessionLadderAccount } from "./Account";
  * @hidden
  */
 export class SessionStashAction extends StashAction {
-  @Type(() => SessionLadderAccount)
+  @Type(/* istanbul ignore next */ () => SessionLadderAccount)
   override account!: Account;
 }

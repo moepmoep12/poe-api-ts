@@ -12,10 +12,10 @@ export class FetchResult extends Transformable {
   id!: string;
 
   @ValidateNested()
-  @Type(() => Item)
+  @Type(/* istanbul ignore next */ () => Item)
   item!: Item;
 
   @ValidateNested()
-  @Type(() => FetchListing)
+  @Type(/* istanbul ignore next */ () => FetchListing)
   listing!: FetchListing;
 }

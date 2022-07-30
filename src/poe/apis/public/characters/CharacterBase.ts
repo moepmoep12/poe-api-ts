@@ -13,7 +13,8 @@ export class PublicCharacterBase extends CharacterBase {
   @Exclude()
   protected _accountName!: string;
 
-  public set accountName(name: string) {
+  @Exclude()
+  public set accountName /* istanbul ignore next */(name: string) {
     this._accountName = name;
   }
 
@@ -29,6 +30,7 @@ export class PublicCharacterBase extends CharacterBase {
   @IsBoolean()
   public pinnable?: boolean;
 
+  /* istanbul ignore next */
   public async getCharacter(): Promise<Character> {
     return await Characters.getByName(this._accountName, this.name);
   }

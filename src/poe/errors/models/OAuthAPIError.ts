@@ -27,7 +27,7 @@ export function isOAuthAPIError(obj: unknown): obj is OAuthAPIError {
 /**
  * @hidden
  */
-export function getCode(message: ErrorMessage): ErrorCode {
+export function getCode /* istanbul ignore next */(message: ErrorMessage): ErrorCode {
   switch (message) {
     case ErrorMessage.InvalidToken:
       return ErrorCode.Unauthorized;

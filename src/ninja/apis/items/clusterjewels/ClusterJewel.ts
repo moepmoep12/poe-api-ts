@@ -11,7 +11,7 @@ export class ClusterJewel extends Equippable<ClusterBaseType, Variant, JewelType
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => TradeInfo)
+  @Type(/* istanbul ignore next */ () => TradeInfo)
   tradeInfo!: TradeInfo[];
 
   @IsEnum(Variant)

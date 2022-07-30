@@ -8,7 +8,7 @@ import { PublicStashChange } from "./PublicStashChange";
 export abstract class Chunk extends Transformable {
   @IsString()
   @IsNotEmpty()
-  @Type(() => String)
+  @Type(/* istanbul ignore next */ () => String)
   @Expose({ name: "next_change_id" })
   /**
    * pagination code
@@ -18,7 +18,7 @@ export abstract class Chunk extends Transformable {
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => PublicStashChange)
+  @Type(/* istanbul ignore next */ () => PublicStashChange)
   // a maximum of 255 results may be returned
   public stashes!: PublicStashChange[];
 

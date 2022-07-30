@@ -8,6 +8,6 @@ import { Group } from "../../../../shared/trade/static";
 export class TradeStaticResponse {
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Group)
+  @Type(/* istanbul ignore next */ () => Group)
   result!: Group[];
 }

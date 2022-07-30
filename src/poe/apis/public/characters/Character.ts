@@ -16,21 +16,21 @@ import * as API from "./API";
 export class PublicCharacter extends PublicCharacterBase implements Character {
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => InventoryItem)
+  @Type(/* istanbul ignore next */ () => InventoryItem)
   equipment!: InventoryItem[];
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => InventoryItem)
+  @Type(/* istanbul ignore next */ () => InventoryItem)
   inventory!: InventoryItem[];
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => InventoryItem)
+  @Type(/* istanbul ignore next */ () => InventoryItem)
   jewels!: InventoryItem[];
 
   @ValidateNested()
-  @Type(() => PublicPassives)
+  @Type(/* istanbul ignore next */ () => PublicPassives)
   passives!: Passives;
 
   constructor(items: GetItemsResponse, passives: Passives) {
@@ -67,16 +67,20 @@ export class PublicCharacter extends PublicCharacterBase implements Character {
       }
     }
 
+    /* istanbul ignore if */
     if (replace) {
       this.equipment = equipment;
       this.inventory = inventory;
     }
     return [inventory, equipment];
   }
+
   async updatePassives(
     replace?: boolean | undefined
   ): Promise<[passives: Passives, jewels: InventoryItem[]]> {
     const passives = await API.getPassives(this._accountName, this.name);
+
+    /* istanbul ignore if */
     if (replace) {
       this.passives = passives;
       this.jewels = passives.jewels;

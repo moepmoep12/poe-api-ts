@@ -13,6 +13,6 @@ export class TradeItemGroup extends Transformable {
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => TradeItem)
+  @Type(/* istanbul ignore next */ () => TradeItem)
   entries!: TradeItem[];
 }

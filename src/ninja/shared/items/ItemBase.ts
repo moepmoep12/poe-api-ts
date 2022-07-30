@@ -27,21 +27,21 @@ export class ItemBase extends Transformable {
   itemClass!: number;
 
   @ValidateNested()
-  @Type(() => Sparkline)
+  @Type(/* istanbul ignore next */ () => Sparkline)
   sparkline!: Sparkline;
 
   @ValidateNested()
-  @Type(() => Sparkline)
+  @Type(/* istanbul ignore next */ () => Sparkline)
   lowConfidenceSparkline!: Sparkline;
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Modifier)
+  @Type(/* istanbul ignore next */ () => Modifier)
   implicitModifiers!: Modifier[];
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Modifier)
+  @Type(/* istanbul ignore next */ () => Modifier)
   explicitModifiers!: Modifier[];
 
   @IsNumber()
@@ -77,7 +77,7 @@ export class ItemBase extends Transformable {
 
   // @IsOptional()
   // @ValidateNested()
-  // @Type(() => TradeInfo)
+  // @Type(/* istanbul ignore next */ () => TradeInfo)
   // tradeInfo?: TradeInfo;
 
   // @IsOptional()

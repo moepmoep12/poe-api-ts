@@ -46,22 +46,22 @@ export abstract class League extends Transformable {
   @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => LeagueRule)
+  @Type(/* istanbul ignore next */ () => LeagueRule)
   rules?: LeagueRule[];
 
   @IsOptional()
   @IsDate()
-  @Type(() => Date)
+  @Type(/* istanbul ignore next */ () => Date)
   registerAt?: Date;
 
   @IsOptional()
   @IsDate()
-  @Type(() => Date)
+  @Type(/* istanbul ignore next */ () => Date)
   startAt?: Date;
 
   @IsOptional()
   @IsDate()
-  @Type(() => Date)
+  @Type(/* istanbul ignore next */ () => Date)
   endAt?: Date;
 
   @IsOptional()
@@ -86,7 +86,7 @@ export abstract class League extends Transformable {
 
   @IsOptional()
   @ValidateNested()
-  @Type(() => Ladder)
+  @Type(/* istanbul ignore next */ () => Ladder)
   ladder?: Ladder;
 
   /**

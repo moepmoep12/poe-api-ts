@@ -9,10 +9,10 @@ import { Characters, Item } from "../../../../shared";
 export class GetItemsResponse {
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Item.InventoryItem)
+  @Type(/* istanbul ignore next */ () => Item.InventoryItem)
   items!: Item.InventoryItem[];
 
   @ValidateNested()
-  @Type(() => Characters.CharacterBase)
+  @Type(/* istanbul ignore next */ () => Characters.CharacterBase)
   character!: Characters.CharacterBase;
 }

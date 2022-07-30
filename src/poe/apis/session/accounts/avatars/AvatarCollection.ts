@@ -19,7 +19,7 @@ export class AvatarCollection extends Transformable {
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Avatar)
+  @Type(/* istanbul ignore next */ () => Avatar)
   public collection!: Avatar[];
 
   @Min(0)
@@ -27,7 +27,7 @@ export class AvatarCollection extends Transformable {
   public total!: number;
 
   @Exclude()
-  public set options(options: AvatarsOptions) {
+  public set options /* istanbul ignore next */(options: AvatarsOptions) {
     this.avatarOptions = { ...this.avatarOptions, ...options };
   }
 
@@ -40,7 +40,7 @@ export class AvatarCollection extends Transformable {
    * @throws [[APIError]]
    */
   public async getNextPage(append = true): Promise<Avatar[] | null> {
-    if (this.avatarOptions.page == null) {
+    if (typeof this.avatarOptions.page != "number" || this.avatarOptions.page < 1) {
       return null;
     }
 
@@ -48,12 +48,9 @@ export class AvatarCollection extends Transformable {
 
     const collection = await API.getAvatars(this.avatarOptions);
 
-    if (collection.collection.length === 0) {
-      return null;
-    }
-
     if (append) {
       this.collection.push(...collection.collection);
+      this.total += collection.collection.length;
     }
 
     return collection.collection;

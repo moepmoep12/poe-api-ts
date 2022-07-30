@@ -18,6 +18,6 @@ export class Mod extends Transformable {
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Magnitude)
+  @Type(/* istanbul ignore next */ () => Magnitude)
   magnitudes!: Magnitude[];
 }

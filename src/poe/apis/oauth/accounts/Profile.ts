@@ -7,6 +7,7 @@ import { Characters } from "..";
  * @hidden
  */
 export class OAuthProfile extends Profile {
+  /* istanbul ignore next */
   public async getCharacters(): Promise<CharacterBase[]> {
     return await Characters.getAll();
   }

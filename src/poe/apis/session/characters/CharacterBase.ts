@@ -19,6 +19,7 @@ export class SessionCharacterBase extends CharacterBase {
   @IsBoolean()
   public pinnable?: boolean;
 
+  /* istanbul ignore next */
   public async getCharacter(): Promise<Character> {
     return await Characters.getByName(this.name);
   }

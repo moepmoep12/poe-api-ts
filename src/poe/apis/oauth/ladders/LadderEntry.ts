@@ -10,6 +10,6 @@ import { OAuthLadderCharacter } from "./LadderCharacter";
  */
 export class OAuthLadderEntry extends LadderEntry {
   @ValidateNested()
-  @Type(() => OAuthLadderCharacter)
+  @Type(/* istanbul ignore next */ () => OAuthLadderCharacter)
   override character!: LadderCharacter;
 }

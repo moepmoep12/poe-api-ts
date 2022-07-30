@@ -10,6 +10,6 @@ import { Stream } from "../../../shared/streams";
 export class Response extends Transformable {
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Stream)
+  @Type(/* istanbul ignore next */ () => Stream)
   streams!: Stream[];
 }

@@ -14,6 +14,6 @@ export class StashHistory extends Transformable {
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => StashAction)
+  @Type(/* istanbul ignore next */ () => StashAction)
   entries!: StashAction[];
 }

@@ -8,6 +8,6 @@ import { Passives } from "../../../shared/passives";
  */
 export class SessionPassives extends Passives {
   @Expose({ name: "items" })
-  @Type(() => InventoryItem)
+  @Type(/* istanbul ignore next */ () => InventoryItem)
   override jewels!: InventoryItem[];
 }

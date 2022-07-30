@@ -36,13 +36,13 @@ export abstract class StashTabBase extends Transformable {
   @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => StashTabBase)
+  @Type(/* istanbul ignore next */ () => StashTabBase)
   public children?: StashTabBase[];
 
   @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Item)
+  @Type(/* istanbul ignore next */ () => Item)
   public items?: Item[] = [];
 
   public abstract get Color(): Color;

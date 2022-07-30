@@ -16,6 +16,6 @@ export class ShowcasePinCollection extends Transformable {
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => ShowcasePin)
+  @Type(/* istanbul ignore next */ () => ShowcasePin)
   entries!: ShowcasePin[];
 }

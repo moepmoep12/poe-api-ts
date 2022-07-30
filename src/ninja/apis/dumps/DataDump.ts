@@ -13,10 +13,10 @@ export class DataDump extends Transformable {
   zipName!: string;
 
   @IsDate()
-  @Type(() => Date)
+  @Type(/* istanbul ignore next */ () => Date)
   minDate!: Date;
 
   @IsDate()
-  @Type(() => Date)
+  @Type(/* istanbul ignore next */ () => Date)
   maxDate!: Date;
 }

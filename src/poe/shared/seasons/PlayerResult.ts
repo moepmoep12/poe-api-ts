@@ -30,6 +30,6 @@ export class PlayerResult extends Transformable {
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Trophy)
+  @Type(/* istanbul ignore next */ () => Trophy)
   trophies!: Trophy[];
 }

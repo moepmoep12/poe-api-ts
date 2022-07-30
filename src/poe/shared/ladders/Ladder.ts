@@ -25,7 +25,7 @@ export abstract class Ladder extends Transformable {
   public total!: number;
 
   @IsDate()
-  @Type(() => Date)
+  @Type(/* istanbul ignore next */ () => Date)
   @Expose({ name: "cached_since" })
   /**
    * @overrides `cached_since`
@@ -34,14 +34,16 @@ export abstract class Ladder extends Transformable {
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => LadderEntry)
+  @Type(/* istanbul ignore next */ () => LadderEntry)
   public entries!: LadderEntry[];
 
-  public set options(options: ILadderOptions) {
+  @Exclude()
+  public set options /* istanbul ignore next */(options: ILadderOptions) {
     this.ladderOptions = { ...this.ladderOptions, ...options };
   }
 
-  public set league(league: string) {
+  @Exclude()
+  public set league /* istanbul ignore next */(league: string) {
     this.leagueId = league;
   }
 

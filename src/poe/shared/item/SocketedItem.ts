@@ -22,7 +22,7 @@ import { Property } from "./models/Property";
 export class SocketedItem extends ItemBase {
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Property)
+  @Type(/* istanbul ignore next */ () => Property)
   properties!: Property[];
 
   @Min(0)
@@ -54,6 +54,6 @@ export class SocketedItem extends ItemBase {
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Property)
+  @Type(/* istanbul ignore next */ () => Property)
   override requirements!: Property[];
 }

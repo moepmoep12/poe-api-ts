@@ -157,25 +157,25 @@ export abstract class ItemBase extends Transformable {
   @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Property)
+  @Type(/* istanbul ignore next */ () => Property)
   notableProperties?: Property[];
 
   @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Property)
+  @Type(/* istanbul ignore next */ () => Property)
   requirements?: Property[];
 
   @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => AdditionalProperty)
+  @Type(/* istanbul ignore next */ () => AdditionalProperty)
   additionalProperties?: AdditionalProperty[];
 
   @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Property)
+  @Type(/* istanbul ignore next */ () => Property)
   nextLevelRequirements?: Property[];
 
   @IsOptional()
@@ -191,7 +191,7 @@ export abstract class ItemBase extends Transformable {
   @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => LogbookMod)
+  @Type(/* istanbul ignore next */ () => LogbookMod)
   logbookMods?: LogbookMod[];
 
   @IsOptional()
@@ -203,7 +203,7 @@ export abstract class ItemBase extends Transformable {
   @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => UltimatumMod)
+  @Type(/* istanbul ignore next */ () => UltimatumMod)
   ultimatumMods?: UltimatumMod[];
 
   @IsOptional()
@@ -225,17 +225,17 @@ export abstract class ItemBase extends Transformable {
 
   @IsOptional()
   @ValidateNested()
-  @Type(() => Hybrid)
+  @Type(/* istanbul ignore next */ () => Hybrid)
   hybrid?: Hybrid;
 
   @IsOptional()
   @ValidateNested()
-  @Type(() => Extended)
+  @Type(/* istanbul ignore next */ () => Extended)
   extended?: Extended;
 
   @IsOptional()
   @ValidateNested()
-  @Type(() => Scourged)
+  @Type(/* istanbul ignore next */ () => Scourged)
   scourged?: Scourged;
 
   @IsOptional()

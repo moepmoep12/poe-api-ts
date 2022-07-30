@@ -9,6 +9,6 @@ import { FetchResult } from "../../../../shared/trade/query/fetch";
 export class TradeFetchResponse {
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => FetchResult)
+  @Type(/* istanbul ignore next */ () => FetchResult)
   result!: FetchResult[];
 }

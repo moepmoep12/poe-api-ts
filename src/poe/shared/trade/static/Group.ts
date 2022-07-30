@@ -16,6 +16,6 @@ export class Group extends Transformable {
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Entry)
+  @Type(/* istanbul ignore next */ () => Entry)
   entries!: Entry[];
 }

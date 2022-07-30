@@ -9,9 +9,12 @@ import * as API from "./API";
  * @hidden
  */
 export class OAuthCharacterBase extends CharacterBase {
+  /* istanbul ignore next */
   public override async getAccount(): Promise<Account> {
     return await Accounts.getProfile();
   }
+
+  /* istanbul ignore next */
   public override async getCharacter(): Promise<Character> {
     return await API.getByName(this.name);
   }

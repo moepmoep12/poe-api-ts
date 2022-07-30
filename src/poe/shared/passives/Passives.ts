@@ -23,22 +23,23 @@ export class Passives {
   @Type((type) =>
     Array.isArray(type?.object[type?.property]) ? Array<number> : Map<string, number>
   )
-  @Transform((params) =>
-    Array.isArray(params.value)
-      ? params.value.map((val) => parseInt(val as string))
-      : (params.value as Map<string, number>)
+  @Transform(
+    /* istanbul ignore next */ (params) =>
+      Array.isArray(params.value)
+        ? params.value.map((val) => parseInt(val as string))
+        : (params.value as Map<string, number>)
   )
   // the key is the string value of the mastery node skill hash and the value is the selected effect hash
   mastery_effects!: Map<string, number> | Array<number>;
 
   @ValidateNested({ each: true })
-  @Type(() => ItemJewelData)
+  @Type(/* istanbul ignore next */ () => ItemJewelData)
   // the key is the string value of the x property of an item from the jewels array
   jewel_data!: Map<string, ItemJewelData>;
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => InventoryItem)
+  @Type(/* istanbul ignore next */ () => InventoryItem)
   jewels!: InventoryItem[];
 
   @IsOptional()

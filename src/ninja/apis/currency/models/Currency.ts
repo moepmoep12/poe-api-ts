@@ -28,7 +28,7 @@ export class Currency extends Transformable {
    * @overrides `paySparkLine`
    */
   @ValidateNested()
-  @Type(() => Sparkline)
+  @Type(/* istanbul ignore next */ () => Sparkline)
   @Expose({ name: "paySparkLine" })
   sellSparkline!: Sparkline;
 
@@ -36,7 +36,7 @@ export class Currency extends Transformable {
    * @overrides `receiveSparkLine`
    */
   @ValidateNested()
-  @Type(() => Sparkline)
+  @Type(/* istanbul ignore next */ () => Sparkline)
   @Expose({ name: "receiveSparkLine" })
   buySparkline!: Sparkline;
 
@@ -44,7 +44,7 @@ export class Currency extends Transformable {
    * @overrides `lowConfidencePaySparkLine`
    */
   @ValidateNested()
-  @Type(() => Sparkline)
+  @Type(/* istanbul ignore next */ () => Sparkline)
   @Expose({ name: "lowConfidencePaySparkLine" })
   lowConfidenceSellSparkline!: Sparkline;
 
@@ -52,7 +52,7 @@ export class Currency extends Transformable {
    * @overrides `lowConfidenceReceiveSparkLine`
    */
   @ValidateNested()
-  @Type(() => Sparkline)
+  @Type(/* istanbul ignore next */ () => Sparkline)
   @Expose({ name: "lowConfidenceReceiveSparkLine" })
   lowConfidenceBuySparkline!: Sparkline;
 
@@ -61,7 +61,7 @@ export class Currency extends Transformable {
    */
   @ValidateNested()
   @Expose({ name: "pay" })
-  @Type(() => Exchange)
+  @Type(/* istanbul ignore next */ () => Exchange)
   sell?: Exchange;
 
   /**
@@ -69,6 +69,6 @@ export class Currency extends Transformable {
    */
   @ValidateNested()
   @Expose({ name: "receive" })
-  @Type(() => Exchange)
+  @Type(/* istanbul ignore next */ () => Exchange)
   buy?: Exchange;
 }

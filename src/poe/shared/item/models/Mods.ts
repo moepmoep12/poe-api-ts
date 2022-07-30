@@ -8,11 +8,11 @@ import { Mod } from "./Mod";
 export class Mods extends Transformable {
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Mod)
+  @Type(/* istanbul ignore next */ () => Mod)
   explicit!: Mod[];
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Mod)
+  @Type(/* istanbul ignore next */ () => Mod)
   implicit!: Mod[];
 }
