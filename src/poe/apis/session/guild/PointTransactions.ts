@@ -8,6 +8,6 @@ import { SessionPointTransaction } from "./PointTransaction";
  * @hidden
  */
 export class SessionPointTransactions extends PointTransactions {
-  @Type(() => SessionPointTransaction)
+  @Type(/* istanbul ignore next */ () => SessionPointTransaction)
   override entries!: PointTransaction[];
 }

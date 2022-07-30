@@ -34,13 +34,13 @@ export class Item extends ItemBase {
   @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Socket)
+  @Type(/* istanbul ignore next */ () => Socket)
   sockets?: Socket[];
 
   @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Property)
+  @Type(/* istanbul ignore next */ () => Property)
   properties?: Property[];
 
   @IsOptional()
@@ -93,7 +93,7 @@ export class Item extends ItemBase {
 
   @IsOptional()
   @ValidateNested()
-  @Type(() => Influences)
+  @Type(/* istanbul ignore next */ () => Influences)
   influences?: Influences;
 
   @IsOptional()
@@ -106,7 +106,7 @@ export class Item extends ItemBase {
 
   @IsOptional()
   @ValidateNested()
-  @Type(() => IncubatedItem)
+  @Type(/* istanbul ignore next */ () => IncubatedItem)
   incubatedItem?: IncubatedItem;
 
   @IsOptional()
@@ -153,6 +153,6 @@ export class Item extends ItemBase {
   @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => SocketedItem)
+  @Type(/* istanbul ignore next */ () => SocketedItem)
   socketedItems?: SocketedItem[];
 }

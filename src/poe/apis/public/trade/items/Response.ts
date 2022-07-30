@@ -9,6 +9,6 @@ import { TradeItemGroup } from "../../../../shared/trade/items";
 export class TradeItemsResponse {
   @ValidateNested({ each: true })
   @IsArray()
-  @Type(() => TradeItemGroup)
+  @Type(/* istanbul ignore next */ () => TradeItemGroup)
   result!: TradeItemGroup[];
 }

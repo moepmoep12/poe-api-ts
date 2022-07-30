@@ -15,6 +15,7 @@ export class TradeSearchResult extends SearchResult {
   private _offset = 0;
 
   public async getNextItems(count: number): Promise<FetchResult[] | null> {
+    /* istanbul ignore if */
     if (this._offset >= this.hashes.length) {
       return null;
     }

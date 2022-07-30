@@ -23,10 +23,12 @@ export class StashAction extends Transformable {
   action!: string;
 
   @IsDate()
-  @Transform(({ value }) => new Date(value * 1000), { toClassOnly: true })
+  @Transform(/* istanbul ignore next */ ({ value }) => new Date(value * 1000), {
+    toClassOnly: true,
+  })
   time!: Date;
 
   @ValidateNested()
-  @Type(() => LadderAccount)
+  @Type(/* istanbul ignore next */ () => LadderAccount)
   account!: LadderAccount;
 }

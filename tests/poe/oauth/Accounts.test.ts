@@ -21,8 +21,6 @@ if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 const scopes = <string>process.env.SCOPES;
 
 describe("Path of Exile - OAuthAPI - Accounts", function () {
-  console.log(process.env);
-
   this.timeout(10000);
 
   let account: Account;

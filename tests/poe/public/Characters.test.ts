@@ -122,5 +122,9 @@ describe("Path of Exile - PublicAPI - Characters", function () {
     step(`result.updateInventory() - should be fulfilled`, async () => {
       await expect(char.updateInventory()).to.be.fulfilled;
     });
+
+    step(`result.updatePassives() - should be fulfilled`, async () => {
+      await expect(char.updatePassives()).to.be.fulfilled;
+    });
   });
 });

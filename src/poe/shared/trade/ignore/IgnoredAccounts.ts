@@ -8,13 +8,13 @@ import { Pagination } from "./models/Pagination";
 
 export class IgnoredAccounts extends Transformable {
   @ValidateNested()
-  @Type(() => Pagination)
+  @Type(/* istanbul ignore next */ () => Pagination)
   pagination!: Pagination;
 
   @IsArray()
   @ValidateNested({ each: true })
   @Expose({ name: "result" })
-  @Type(() => IgnoredAccount)
+  @Type(/* istanbul ignore next */ () => IgnoredAccount)
   /**
    * @overrides `result`
    */

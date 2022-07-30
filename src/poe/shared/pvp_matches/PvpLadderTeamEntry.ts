@@ -20,7 +20,7 @@ export abstract class PvpLadderTeamEntry extends Transformable {
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => PvpLadderTeamMember)
+  @Type(/* istanbul ignore next */ () => PvpLadderTeamMember)
   members!: PvpLadderTeamMember[];
 
   @IsOptional()
@@ -46,6 +46,6 @@ export abstract class PvpLadderTeamEntry extends Transformable {
 
   @IsOptional()
   @IsDate()
-  @Type(() => Date)
+  @Type(/* istanbul ignore next */ () => Date)
   lastGameTime?: Date;
 }

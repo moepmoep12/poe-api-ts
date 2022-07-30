@@ -15,6 +15,7 @@ export function buildURL<T>(
   if (optionalParameters && defaults) {
     for (const key in defaults) {
       if (optionalParameters[key] == null) {
+        /* istanbul ignore next */
         optionalParameters[key] = defaults[key];
       }
     }

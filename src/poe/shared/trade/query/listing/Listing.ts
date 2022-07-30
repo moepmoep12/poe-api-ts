@@ -9,10 +9,10 @@ export class Listing extends Transformable {
   whisper!: string;
 
   @ValidateNested()
-  @Type(() => ListedAccount)
+  @Type(/* istanbul ignore next */ () => ListedAccount)
   account!: ListedAccount;
 
   @IsDate()
-  @Type(() => Date)
+  @Type(/* istanbul ignore next */ () => Date)
   indexed!: Date;
 }

@@ -1,5 +1,5 @@
 import Color from "color";
-import { Type } from "class-transformer";
+import { Exclude, Type } from "class-transformer";
 import { Allow, IsOptional, IsString, ValidateNested } from "class-validator";
 
 import { StashTabBase } from "../../../shared/stashes";
@@ -16,7 +16,7 @@ export class OAuthStashTab extends StashTabBase {
   protected _league = "";
 
   @ValidateNested()
-  @Type(() => StashTabMetadata)
+  @Type(/* istanbul ignore next */ () => StashTabMetadata)
   public metadata!: StashTabMetadata;
 
   @IsOptional()
@@ -24,10 +24,11 @@ export class OAuthStashTab extends StashTabBase {
   // parent ID
   public parent?: string;
 
-  @Type(() => OAuthStashTab)
+  @Type(/* istanbul ignore next */ () => OAuthStashTab)
   public children?: OAuthStashTab[];
 
-  public set league(league: string) {
+  @Exclude()
+  public set league /* istanbul ignore next */(league: string) {
     this._league = league;
     if (this.children) {
       for (const child of this.children) {
@@ -36,10 +37,12 @@ export class OAuthStashTab extends StashTabBase {
     }
   }
 
+  /* istanbul ignore next */
   public override get Color(): Color {
     return new Color(`#${this.metadata.colour}`);
   }
 
+  /* istanbul ignore next */
   public override async update(): Promise<void> {
     const tab = await Stashes.getStashTab(this._league, this.id);
     Object.assign(this, tab);

@@ -30,7 +30,7 @@ export abstract class ItemJewelData {
 
   @IsOptional()
   @ValidateNested()
-  @Type(() => Subgraph)
+  @Type(/* istanbul ignore next */ () => Subgraph)
   // only present on cluster jewels
   subgraph?: Subgraph;
 }

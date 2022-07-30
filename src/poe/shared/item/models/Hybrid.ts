@@ -22,7 +22,7 @@ export class Hybrid {
   @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Property)
+  @Type(/* istanbul ignore next */ () => Property)
   properties?: Property[];
 
   @IsOptional()

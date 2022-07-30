@@ -19,6 +19,6 @@ export class Stat extends Transformable {
 
   @IsOptional()
   @ValidateNested({ each: true })
-  @Type(() => StatOption)
+  @Type(/* istanbul ignore next */ () => StatOption)
   option?: StatOption;
 }

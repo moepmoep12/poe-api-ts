@@ -12,9 +12,9 @@ import { OAuthPvpCharacter } from "./PvpCharacter";
  * @hidden
  */
 export class OAuthPvpLadderTeamMember extends PvpLadderTeamMember {
-  @Type(() => OAuthProfile)
+  @Type(/* istanbul ignore next */ () => OAuthProfile)
   override account!: Account;
 
-  @Type(() => OAuthPvpCharacter)
+  @Type(/* istanbul ignore next */ () => OAuthPvpCharacter)
   override character!: PvpCharacter;
 }

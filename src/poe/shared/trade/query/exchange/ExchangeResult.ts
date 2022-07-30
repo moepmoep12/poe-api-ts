@@ -14,6 +14,6 @@ export class ExchangeResult extends Transformable {
   item!: null;
 
   @ValidateNested()
-  @Type(() => ExchangeListing)
+  @Type(/* istanbul ignore next */ () => ExchangeListing)
   listing!: ExchangeListing;
 }

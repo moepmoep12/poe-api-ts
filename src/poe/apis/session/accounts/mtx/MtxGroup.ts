@@ -20,7 +20,7 @@ export class MtxGroup extends Transformable {
   @IsArray()
   @ValidateNested({ each: true })
   @Expose({ name: "MTXItems" })
-  @Type(() => MtxItem)
+  @Type(/* istanbul ignore next */ () => MtxItem)
   /**
    * @overrides `MTXItems`
    */

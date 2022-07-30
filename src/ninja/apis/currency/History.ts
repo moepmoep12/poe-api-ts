@@ -9,7 +9,7 @@ export class History extends Transformable {
   @IsArray()
   @ValidateNested({ each: true })
   @Expose({ name: "payCurrencyGraphData" })
-  @Type(() => HistoryPoint)
+  @Type(/* istanbul ignore next */ () => HistoryPoint)
   /**
    * @overrides `payCurrencyGraphData`
    */
@@ -18,7 +18,7 @@ export class History extends Transformable {
   @IsArray()
   @ValidateNested({ each: true })
   @Expose({ name: "receiveCurrencyGraphData" })
-  @Type(() => HistoryPoint)
+  @Type(/* istanbul ignore next */ () => HistoryPoint)
   /**
    * @overrides `receiveCurrencyGraphData`
    */

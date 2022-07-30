@@ -22,7 +22,7 @@ export abstract class ListedAccount extends Transformable {
 
   @ValidateNested()
   @ValidateIf((_, val) => val != null)
-  @Type(() => Online)
+  @Type(/* istanbul ignore next */ () => Online)
   online!: Online | null;
 
   @IsNotEmpty()

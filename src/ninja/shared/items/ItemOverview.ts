@@ -12,6 +12,6 @@ export class ItemOverview<T extends ItemBase> {
   entries!: T[];
 
   @ValidateNested()
-  @Type(() => Language)
+  @Type(/* istanbul ignore next */ () => Language)
   language!: Language;
 }

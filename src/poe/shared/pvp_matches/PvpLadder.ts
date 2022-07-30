@@ -10,6 +10,6 @@ export abstract class PvpLadder extends Transformable {
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => PvpLadderTeamEntry)
+  @Type(/* istanbul ignore next */ () => PvpLadderTeamEntry)
   entries!: PvpLadderTeamEntry[];
 }

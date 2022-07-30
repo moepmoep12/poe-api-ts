@@ -11,6 +11,7 @@ import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { Ladders, ServiceScopes } from "../../../src/poe/apis/oauth";
 import { OAuthLadder } from "../../../src/poe/apis/oauth/ladders/Ladder";
+import { OAuthLadderOptions } from "../../../src/poe/apis/oauth/ladders";
 
 import { LadderCharacter } from "../../../src/poe/shared/ladders";
 
@@ -28,6 +29,9 @@ describe("Path of Exile - OAuthAPI - Ladders", function () {
   const limit = 40;
   const filterKey: keyof LadderCharacter = "class";
   const filterValue = "Ascendant";
+  const options: OAuthLadderOptions = {
+    limit: limit,
+  };
   let ladder: OAuthLadder;
 
   if (!hasScope) {
@@ -41,7 +45,7 @@ describe("Path of Exile - OAuthAPI - Ladders", function () {
   }
 
   it(`#get(${league}, { limit: ${limit}}) - should return ladder for ${league} league`, async () => {
-    ladder = <OAuthLadder>await expect(Ladders.get(league, { limit: limit })).to.be.fulfilled;
+    ladder = <OAuthLadder>await expect(Ladders.get(league, options)).to.be.fulfilled;
   });
 
   step("validateOrReject(result) - should be fulfilled", async () => {
@@ -81,5 +85,29 @@ describe("Path of Exile - OAuthAPI - Ladders", function () {
 
   step(`ladder.entries.length - should be ${2 * limit}`, () => {
     expect(ladder.entries.length).to.be.equal(2 * limit);
+  });
+
+  step("result.getNextEntries(true) - should return null with no options", async () => {
+    // @ts-expect-error testing
+    const origOptions = { ...ladder.ladderOptions };
+    const invalidOptions = {
+      offset: -1,
+    };
+    ladder.options = invalidOptions;
+    const result = <null>await expect(ladder.getNextEntries(true)).to.be.fulfilled;
+    ladder.options = origOptions;
+    expect(result).to.be.null;
+  });
+
+  step("result.getNextEntries(true) - should return null with exceeding offset", async () => {
+    // @ts-expect-error testing
+    const origOptions = { ...ladder.ladderOptions };
+    const invalidOptions = {
+      offset: 9999999,
+    };
+    ladder.options = invalidOptions;
+    const result = <null>await expect(ladder.getNextEntries(true)).to.be.fulfilled;
+    ladder.options = origOptions;
+    expect(result).to.be.null;
   });
 });

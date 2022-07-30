@@ -9,11 +9,11 @@ import { PvpCharacter } from "./PvpCharacter";
 
 export abstract class PvpLadderTeamMember extends Transformable {
   @ValidateNested()
-  @Type(() => Account)
+  @Type(/* istanbul ignore next */ () => Account)
   account!: Account;
 
   @ValidateNested()
-  @Type(() => PvpCharacter)
+  @Type(/* istanbul ignore next */ () => PvpCharacter)
   character!: PvpCharacter;
 
   @IsOptional()

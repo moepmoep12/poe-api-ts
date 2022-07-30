@@ -12,6 +12,6 @@ export class StatGroup extends Transformable {
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Stat)
+  @Type(/* istanbul ignore next */ () => Stat)
   entries!: Stat[];
 }

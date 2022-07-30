@@ -7,6 +7,6 @@ import { OAuthStashTab } from "./StashTab";
  * @hidden
  */
 export class OAuthStash extends Stash<OAuthStashTab> {
-  @Type(() => OAuthStashTab)
+  @Type(/* istanbul ignore next */ () => OAuthStashTab)
   public override tabs!: OAuthStashTab[];
 }

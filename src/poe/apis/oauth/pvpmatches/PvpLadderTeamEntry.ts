@@ -9,7 +9,7 @@ import { OAuthPvpLadderTeamMember } from "./PvpLadderTeamMember";
  * @hidden
  */
 export class OAuthPvpLadderTeamEntry extends PvpLadderTeamEntry {
-  @Type(() => OAuthPvpLadderTeamMember)
+  @Type(/* istanbul ignore next */ () => OAuthPvpLadderTeamMember)
   members!: PvpLadderTeamMember[];
 
   @IsOptional()
@@ -27,6 +27,6 @@ export class OAuthPvpLadderTeamEntry extends PvpLadderTeamEntry {
   @IsOptional()
   @IsDate()
   @Expose({ name: "last_game_time" })
-  @Type(() => Date)
+  @Type(/* istanbul ignore next */ () => Date)
   lastGameTime?: Date;
 }

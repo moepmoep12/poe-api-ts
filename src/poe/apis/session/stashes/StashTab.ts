@@ -12,7 +12,7 @@ import { IRealmOptions } from "../../../shared";
  */
 export class SessionStashTab extends StashTabBase {
   @Allow()
-  @Type(() => Colour)
+  @Type(/* istanbul ignore next */ () => Colour)
   protected colour!: Colour;
 
   @Allow()
@@ -57,16 +57,17 @@ export class SessionStashTab extends StashTabBase {
   }
 
   @Exclude()
-  public set league(league: string) {
+  public set league /* istanbul ignore next */(league: string) {
     this._league = league;
   }
 
   @Exclude()
-  public set account(account: string) {
+  public set account /* istanbul ignore next */(account: string) {
     this._accountName = account;
   }
 
   @Exclude()
+  /* istanbul ignore next */
   public set options(options: IRealmOptions) {
     this._options = options;
   }

@@ -27,6 +27,6 @@ export class MtxItem extends ItemBase {
   @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Property)
+  @Type(/* istanbul ignore next */ () => Property)
   properties?: Property[];
 }

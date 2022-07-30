@@ -32,10 +32,10 @@ export class Extended {
 
   @IsOptional()
   @ValidateNested()
-  @Type(() => Mods)
+  @Type(/* istanbul ignore next */ () => Mods)
   mods?: Mods;
 
   @ValidateNested()
-  @Type(() => ModHashes)
+  @Type(/* istanbul ignore next */ () => ModHashes)
   hashes!: ModHashes;
 }

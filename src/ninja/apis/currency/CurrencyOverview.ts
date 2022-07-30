@@ -11,16 +11,16 @@ import { CurrencyDetail } from "./models/CurrencyDetail";
 export class CurrencyOverview extends Transformable {
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Currency)
+  @Type(/* istanbul ignore next */ () => Currency)
   @Expose({ name: "lines" })
   entries!: Currency[];
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => CurrencyDetail)
+  @Type(/* istanbul ignore next */ () => CurrencyDetail)
   currencyDetails!: CurrencyDetail[];
 
   @ValidateNested()
-  @Type(() => Language)
+  @Type(/* istanbul ignore next */ () => Language)
   language!: Language;
 }

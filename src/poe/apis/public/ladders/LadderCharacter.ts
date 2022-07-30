@@ -14,10 +14,12 @@ export class PublicLadderCharacter extends LadderCharacter {
   @Exclude()
   private _accountName!: string;
 
-  public set accountName(name: string) {
+  @Exclude()
+  public set accountName /* istanbul ignore next */(name: string) {
     this._accountName = name;
   }
 
+  /* istanbul ignore next */
   public async getCharacter(): Promise<Character> {
     return await Characters.getByName(this._accountName, this.name);
   }

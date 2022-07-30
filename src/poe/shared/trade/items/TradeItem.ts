@@ -19,7 +19,7 @@ export abstract class TradeItem extends Transformable {
 
   @IsOptional()
   @ValidateNested()
-  @Type(() => Flags)
+  @Type(/* istanbul ignore next */ () => Flags)
   flags?: Flags;
 
   @IsOptional()

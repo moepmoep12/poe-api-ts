@@ -7,6 +7,6 @@ import { SessionStashAction } from "./StashAction";
  * @hidden
  */
 export class SessionStashHistory extends StashHistory {
-  @Type(() => SessionStashAction)
+  @Type(/* istanbul ignore next */ () => SessionStashAction)
   override entries!: StashAction[];
 }

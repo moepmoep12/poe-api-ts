@@ -60,11 +60,11 @@ export abstract class ListedPrice extends Transformable {
 
   @IsOptional()
   @ValidateNested()
-  @Type(() => Exchange)
+  @Type(/* istanbul ignore next */ () => Exchange)
   exchange?: Exchange;
 
   @IsOptional()
   @ValidateNested()
-  @Type(() => PricedItem)
+  @Type(/* istanbul ignore next */ () => PricedItem)
   item?: PricedItem;
 }

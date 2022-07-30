@@ -7,6 +7,6 @@ import { ExchangeOffer } from "./ExchangeOffer";
 export class ExchangeListing extends Listing {
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => ExchangeOffer)
+  @Type(/* istanbul ignore next */ () => ExchangeOffer)
   offers!: Array<ExchangeOffer>;
 }

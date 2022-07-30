@@ -9,7 +9,7 @@ import { SessionStashTab } from "./StashTab";
  * @hidden
  */
 export class SessionStash extends Stash<SessionStashTab> {
-  @Type(() => SessionStashTab)
+  @Type(/* istanbul ignore next */ () => SessionStashTab)
   public override tabs!: SessionStashTab[];
 
   @Exclude()

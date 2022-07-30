@@ -8,10 +8,10 @@ import { ExchangeItem } from "./ExchangeItem";
 
 export class ExchangeOffer extends Transformable {
   @ValidateNested()
-  @Type(() => Exchange)
+  @Type(/* istanbul ignore next */ () => Exchange)
   exchange!: Exchange;
 
   @ValidateNested()
-  @Type(() => ExchangeItem)
+  @Type(/* istanbul ignore next */ () => ExchangeItem)
   item!: ExchangeItem;
 }

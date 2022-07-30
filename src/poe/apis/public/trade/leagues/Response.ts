@@ -11,6 +11,6 @@ import { PublicTradeLeague } from "./TradeLeague";
 export class TradeLeagueResponse {
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => PublicTradeLeague)
+  @Type(/* istanbul ignore next */ () => PublicTradeLeague)
   result!: TradeLeague[];
 }

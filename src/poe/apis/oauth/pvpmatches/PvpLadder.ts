@@ -10,6 +10,6 @@ import { OAuthPvpLadderTeamEntry } from "./PvpLadderTeamEntry";
 export class OAuthPvpLadder extends PvpLadder {
   @ValidateNested({ each: true })
   @IsArray()
-  @Type(() => OAuthPvpLadderTeamEntry)
+  @Type(/* istanbul ignore next */ () => OAuthPvpLadderTeamEntry)
   entries!: PvpLadderTeamEntry[];
 }

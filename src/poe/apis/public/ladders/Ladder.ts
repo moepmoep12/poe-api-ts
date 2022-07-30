@@ -9,11 +9,16 @@ import { PublicLadderEntry } from "./LadderEntry";
  * @hidden
  */
 export class PublicLadder extends Ladder {
-  @Type(() => PublicLadderEntry)
+  @Type(/* istanbul ignore next */ () => PublicLadderEntry)
   public entries!: LadderEntry[];
 
   public async getNextEntries(append: boolean): Promise<LadderEntry[] | null> {
-    if (this.ladderOptions.offset == null || this.ladderOptions.limit == null) {
+    if (
+      typeof this.ladderOptions.offset != "number" ||
+      this.ladderOptions.offset < 0 ||
+      typeof this.ladderOptions.limit != "number" ||
+      this.ladderOptions.limit < 0
+    ) {
       return null;
     }
 
@@ -24,6 +29,7 @@ export class PublicLadder extends Ladder {
 
     // Make sure limit + offset isn't higher than total since that's considered an invalid query
     if (nextOffset + this.ladderOptions.limit >= this.total) {
+      /* istanbul ignore next */
       this.options.limit = this.total - nextOffset;
     }
 
@@ -33,6 +39,7 @@ export class PublicLadder extends Ladder {
 
     if (append) {
       this.entries.push(...ladder.entries);
+      this.total += ladder.entries.length;
     }
 
     return ladder.entries;

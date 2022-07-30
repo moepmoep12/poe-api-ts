@@ -5,6 +5,6 @@ import { ItemOverview } from "../../../shared/items";
 import { DivinationCard } from "./DivinationCard";
 
 export class DivinitationCardOverview extends ItemOverview<DivinationCard> {
-  @Type(() => DivinationCard)
+  @Type(/* istanbul ignore next */ () => DivinationCard)
   entries!: DivinationCard[];
 }

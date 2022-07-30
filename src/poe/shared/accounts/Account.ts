@@ -19,12 +19,12 @@ export abstract class Account extends Transformable {
 
   @IsOptional()
   @ValidateNested()
-  @Type(() => Stream)
+  @Type(/* istanbul ignore next */ () => Stream)
   twitch?: Stream;
 
   @IsOptional()
   @ValidateNested()
-  @Type(() => Guild)
+  @Type(/* istanbul ignore next */ () => Guild)
   guild?: Guild;
 
   /**

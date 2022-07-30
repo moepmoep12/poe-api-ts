@@ -27,7 +27,7 @@ export class PublicStashChange extends Transformable {
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => PublicStashChangeItem)
+  @Type(/* istanbul ignore next */ () => PublicStashChangeItem)
   items!: PublicStashChangeItem[];
 
   @IsOptional()

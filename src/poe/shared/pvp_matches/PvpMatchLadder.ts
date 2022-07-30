@@ -7,10 +7,10 @@ import { PvpMatch } from "./PvpMatch";
 
 export abstract class PvpMatchLadder extends Transformable {
   @ValidateNested()
-  @Type(() => PvpMatch)
+  @Type(/* istanbul ignore next */ () => PvpMatch)
   match!: PvpMatch;
 
   @ValidateNested()
-  @Type(() => PvpLadder)
+  @Type(/* istanbul ignore next */ () => PvpLadder)
   ladder!: PvpLadder;
 }

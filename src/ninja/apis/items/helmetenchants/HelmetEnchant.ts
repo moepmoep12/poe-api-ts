@@ -10,6 +10,6 @@ export class HelmetEnchant extends ItemBase {
 
   @IsOptional()
   @ValidateNested({ each: true })
-  @Type(() => TradeInfo)
+  @Type(/* istanbul ignore next */ () => TradeInfo)
   tradeInfo?: TradeInfo[];
 }

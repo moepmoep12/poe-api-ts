@@ -7,6 +7,6 @@ import { CompletedChallenges } from "./models/CompletedChallenges";
 
 export abstract class LadderAccount extends Account {
   @ValidateNested()
-  @Type(() => CompletedChallenges)
+  @Type(/* istanbul ignore next */ () => CompletedChallenges)
   challenges?: CompletedChallenges;
 }

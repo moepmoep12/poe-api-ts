@@ -6,6 +6,6 @@ import { Option } from "./Option";
 export abstract class StatOption {
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => Option)
+  @Type(/* istanbul ignore next */ () => Option)
   options!: Option[];
 }

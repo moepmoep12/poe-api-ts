@@ -42,14 +42,14 @@ export class PointTransaction extends Transformable {
   manual!: boolean;
 
   @ValidateNested()
-  @Type(() => Guild)
+  @Type(/* istanbul ignore next */ () => Guild)
   guild!: Guild;
 
   @ValidateNested()
-  @Type(() => Account)
+  @Type(/* istanbul ignore next */ () => Account)
   account!: Account;
 
   @IsDate()
-  @Type(() => Date)
+  @Type(/* istanbul ignore next */ () => Date)
   createdAt!: Date;
 }

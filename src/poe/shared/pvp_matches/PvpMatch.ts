@@ -37,17 +37,17 @@ export abstract class PvpMatch extends Transformable {
 
   @IsOptional()
   @IsDate()
-  @Type(() => Date)
+  @Type(/* istanbul ignore next */ () => Date)
   public startAt?: Date;
 
   @IsOptional()
   @IsDate()
-  @Type(() => Date)
+  @Type(/* istanbul ignore next */ () => Date)
   public endAt?: Date;
 
   @IsOptional()
   @IsDate()
-  @Type(() => Date)
+  @Type(/* istanbul ignore next */ () => Date)
   public registerAt?: Date;
 
   @IsOptional()

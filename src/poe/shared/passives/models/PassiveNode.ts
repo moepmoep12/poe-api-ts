@@ -80,7 +80,7 @@ export abstract class PassiveNode {
   @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => MasteryEffect)
+  @Type(/* istanbul ignore next */ () => MasteryEffect)
   masteryEffects?: MasteryEffect[];
 
   @IsOptional()
@@ -100,7 +100,7 @@ export abstract class PassiveNode {
 
   @IsOptional()
   @ValidateNested()
-  @Type(() => ClusterJewel)
+  @Type(/* istanbul ignore next */ () => ClusterJewel)
   // cluster jewel information
   expansionJewel?: ClusterJewel;
 
