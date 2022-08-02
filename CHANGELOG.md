@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/moepmoep12/poe-api-ts/compare/v1.0.2...v1.1.0) (2022-08-02)
+
+
+### Features
+
+* OAuth PvPMatches & Ladders ([37f1dd0](https://github.com/moepmoep12/poe-api-ts/commit/37f1dd0e0da9bafdfc6f0bfef60ce74881f476f3))
+
 ## [1.0.2](https://github.com/moepmoep12/poe-api-ts/compare/v1.0.1...v1.0.2) (2022-07-28)
 
 
