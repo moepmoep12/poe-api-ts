@@ -13,7 +13,6 @@ export class Guild extends Transformable {
   id?: string;
 
   @IsOptional()
-  @IsNotEmpty()
   @IsString()
   tag?: string;
 

@@ -73,12 +73,5 @@ export const getLadder = async (
   options?: IPvpLadderOptions
 ): Promise<PvpMatchLadder> => {
   const url = buildURL(`${OAuthEndpoints.PVPMatches}/${match}/ladder`, options);
-  return await requestTransformed(
-    OAuthPvpMatchLadder,
-    url,
-    "GET",
-    {},
-    addServiceTokenHeader(),
-    stripOuter
-  );
+  return await requestTransformed(OAuthPvpMatchLadder, url, "GET", {}, addServiceTokenHeader());
 };

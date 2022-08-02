@@ -25,86 +25,77 @@ describe("Path of Exile - OAuthAPI - PVPMatches", function () {
 
   let pvpMatches: OAuthPvpMatch[];
 
-  describe("Matches", function () {
-    this.timeout(20000);
+  this.timeout(20000);
 
-    const hasScope = process.env.SCOPES?.includes(ServiceScopes.PvpMatches);
-    if (!hasScope) {
-      it("#getMatches() - should reject unauthorized", async () => {
-        await expect(PVPMatches.getMatches()).to.be.rejectedWith(
-          APIError,
-          ErrorMessage.InsufficientScope
-        );
-      });
-
-      it(`#getMatch('')) - should reject unauthorized`, async () => {
-        await expect(PVPMatches.getMatch("")).to.be.rejectedWith(
-          APIError,
-          ErrorMessage.InsufficientScope
-        );
-      });
-      return;
-    }
-
-    it("#getMatches() - should return PvP matches", async () => {
-      pvpMatches = <OAuthPvpMatch[]>(
-        await expect(PVPMatches.getMatches({ league: leagueName, type: "league" })).to.be.fulfilled
+  const hasScope = process.env.SCOPES?.includes(ServiceScopes.PvpMatches);
+  if (!hasScope) {
+    it("#getMatches() - should reject unauthorized", async () => {
+      await expect(PVPMatches.getMatches()).to.be.rejectedWith(
+        APIError,
+        ErrorMessage.InsufficientScope
       );
     });
 
-    step("validateOrReject(result) - should be fulfilled", async () => {
-      for (const pvpMatch of pvpMatches) {
-        try {
-          await validateOrReject(pvpMatch, validatorOptions);
-        } catch (error: unknown) {
-          if (Array.isArray(error) && error[0] instanceof ValidationError)
-            throw new ValidationErrorExt(error as ValidationError[]);
-          else throw error;
-        }
-      }
+    it(`#getMatch('')) - should reject unauthorized`, async () => {
+      await expect(PVPMatches.getMatch("")).to.be.rejectedWith(
+        APIError,
+        ErrorMessage.InsufficientScope
+      );
     });
+    return;
+  }
 
-    step(`result - should not be empty`, () => {
-      expect(pvpMatches).to.be.not.empty;
-    });
-
-    step("#getMatch() - should return single match", async () => {
-      await expect(PVPMatches.getMatch(pvpMatches[0].id)).to.be.fulfilled;
-    });
+  it("#getMatches() - should return PvP matches", async () => {
+    pvpMatches = <OAuthPvpMatch[]>(
+      await expect(PVPMatches.getMatches({ league: leagueName, type: "league" })).to.be.fulfilled
+    );
   });
 
-  describe("Ladder", function () {
-    this.timeout(20000);
-
-    let pvpLadder: OAuthPvpLadder;
-
-    const hasScope = process.env.SCOPES?.includes(ServiceScopes.PvpLadder);
-    if (!pvpMatches) return;
-
-    if (!hasScope) {
-      it("#getLadder() - should reject unauthorized", async () => {
-        await expect(PVPMatches.getLadder(pvpMatches[0].id)).to.be.rejectedWith(
-          APIError,
-          ErrorMessage.InsufficientScope
-        );
-      });
-      return;
-    }
-
-    it("#getLadder - should return PvP Ladder", async () => {
-      pvpLadder = <OAuthPvpLadder>(
-        await expect(PVPMatches.getLadder(pvpMatches[0].id)).to.be.fulfilled
-      );
-    });
-
-    step("validateOrReject(result) - should be fulfilled", async () => {
+  step("validateOrReject(result) - should be fulfilled", async () => {
+    for (const pvpMatch of pvpMatches) {
       try {
-        await validateOrReject(pvpLadder, validatorOptions);
+        await validateOrReject(pvpMatch, validatorOptions);
       } catch (error: unknown) {
         if (Array.isArray(error) && error[0] instanceof ValidationError)
           throw new ValidationErrorExt(error as ValidationError[]);
         else throw error;
       }
+    }
+  });
+
+  step(`result - should not be empty`, () => {
+    expect(pvpMatches).to.be.not.empty;
+  });
+
+  step("#getMatch() - should return single match", async () => {
+    await expect(PVPMatches.getMatch(pvpMatches[0].id)).to.be.fulfilled;
+  });
+
+  let pvpLadder: OAuthPvpLadder;
+
+  if (!process.env.SCOPES?.includes(ServiceScopes.PvpLadder)) {
+    it("#getLadder() - should reject unauthorized", async () => {
+      await expect(PVPMatches.getLadder(pvpMatches[0].id)).to.be.rejectedWith(
+        APIError,
+        ErrorMessage.InsufficientScope
+      );
     });
+    return;
+  }
+
+  step("#getLadder - should return PvP Ladder", async () => {
+    pvpLadder = <OAuthPvpLadder>(
+      await expect(PVPMatches.getLadder(pvpMatches[0].id)).to.be.fulfilled
+    );
+  });
+
+  step("validateOrReject(result) - should be fulfilled", async () => {
+    try {
+      await validateOrReject(pvpLadder, validatorOptions);
+    } catch (error: unknown) {
+      if (Array.isArray(error) && error[0] instanceof ValidationError)
+        throw new ValidationErrorExt(error as ValidationError[]);
+      else throw error;
+    }
   });
 });

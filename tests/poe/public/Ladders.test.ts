@@ -64,6 +64,10 @@ describe("Path of Exile - PublicAPI - Ladders", function () {
     }
   });
 
+  step(`result.toPlain() - should contain cached_since`, () => {
+    expect("cached_since" in ladder.toPlain()).to.be.true;
+  });
+
   step("ladder.getNextEntries() - should fetch next entries", async () => {
     await expect(ladder.getNextEntries(true)).to.be.fulfilled;
   });
