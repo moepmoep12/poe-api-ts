@@ -5,15 +5,19 @@ import { validationErrorsAsString } from "class-validator-flat-formatter";
  * Wraps multiple ValidationError such that all errors are reported on testing
  */
 export class ValidationErrorExt extends ValidationError implements Error {
+  public message: string;
+
   constructor(public errors: ValidationError[]) {
     super();
+
+    this.message = this.getMessage();
   }
 
   get name(): string {
     return "ValidationError";
   }
 
-  get message(): string {
+  getMessage(): string {
     const validErrors = validationErrorsAsString(this.errors);
     if (validErrors) return `ValidationError: ${validErrors}`;
     else {

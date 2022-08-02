@@ -5,8 +5,8 @@ import { Ladder } from "../../../shared/ladders";
 import { OAuthEndpoints } from "../utils/Endpoints";
 import { addServiceTokenHeader } from "../utils/Headers";
 
-import { OAuthLadder } from "./Ladder";
 import { OAuthLadderOptions } from "./models";
+import { Response } from "./Response";
 
 /**
  * @remarks
@@ -27,7 +27,14 @@ import { OAuthLadderOptions } from "./models";
  */
 export const get = async (id: string, options?: OAuthLadderOptions): Promise<Ladder> => {
   const url = buildURL(`${OAuthEndpoints.League}/${id}/ladder`, options);
-  const ladder = await requestTransformed(OAuthLadder, url, "GET", {}, addServiceTokenHeader());
+  const ladderResponse = await requestTransformed(
+    Response,
+    url,
+    "GET",
+    {},
+    addServiceTokenHeader()
+  );
+  const ladder = ladderResponse.ladder;
   ladder.league = id;
   if (options) ladder.options = options;
   return ladder;
