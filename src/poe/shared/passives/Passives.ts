@@ -20,8 +20,9 @@ export class Passives {
 
   @IsInt({ each: true })
   @Min(0, { each: true })
-  @Type((type) =>
-    Array.isArray(type?.object[type?.property]) ? Array<number> : Map<string, number>
+  @Type(
+    /* istanbul ignore next */ (type) =>
+      Array.isArray(type?.object[type?.property]) ? Array<number> : Map<string, number>
   )
   @Transform(
     /* istanbul ignore next */ (params) =>

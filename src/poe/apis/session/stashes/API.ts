@@ -39,6 +39,7 @@ export const getStash = async (
   for (const tab of stash.tabs) {
     tab.league = league;
     tab.account = accountName;
+    /* istanbul ignore if */
     if (options) tab.options = options;
   }
   return stash;

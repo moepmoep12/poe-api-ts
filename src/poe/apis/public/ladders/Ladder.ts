@@ -28,8 +28,8 @@ export class PublicLadder extends Ladder {
     }
 
     // Make sure limit + offset isn't higher than total since that's considered an invalid query
+    /* istanbul ignore if */
     if (nextOffset + this.ladderOptions.limit >= this.total) {
-      /* istanbul ignore next */
       this.options.limit = this.total - nextOffset;
     }
 
@@ -37,6 +37,7 @@ export class PublicLadder extends Ladder {
 
     const ladder = await API.get(this.leagueId, this.ladderOptions);
 
+    /* istanbul ignore next */
     if (append) {
       this.entries.push(...ladder.entries);
       this.total += ladder.entries.length;

@@ -48,6 +48,7 @@ export const getAvatars = async (options?: AvatarsOptions): Promise<AvatarCollec
 
   const collection = await requestTransformed(AvatarCollection, url);
 
+  /* istanbul ignore if */
   if (options) {
     collection.options = options;
   }

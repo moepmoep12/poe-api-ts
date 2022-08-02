@@ -22,10 +22,6 @@ export const getOverview = async (
  * @param league
  * @param id
  */
-export const getHistory = /* istanbul ignore next */ (
-  league: string,
-  id: number
-): Promise<HistoryPoint[]> => {
-  /* istanbul ignore next */
-  return getHistoryGeneric(league, ItemOption.Sentinel, id);
+export const getHistory = async (league: string, id: number): Promise<HistoryPoint[]> => {
+  return await getHistoryGeneric(league, ItemOption.Sentinel, id);
 };

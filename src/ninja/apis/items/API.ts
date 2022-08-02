@@ -14,6 +14,7 @@ import { ItemOption } from "./models/ItemOption";
 export const getOverviewGeneric = async <T extends ItemBase>(
   league: string,
   type: ItemOption,
+  /* istanbul ignore next */
   language: LanguageCode = LanguageCode.en,
   cls: new () => ItemOverview<T>
 ): Promise<ItemOverview<T>> => {

@@ -9,7 +9,8 @@ export class Transformable {
    * be reverted to the original keys. For example, the `cachedSince` property in the [[Ladder]]
    * class will be reverted to the original API property, `cached_since`.
    */
-  public toPlain /* istanbul ignore next */(): unknown {
+
+  public toPlain(): Record<string, unknown> {
     return instanceToPlain(this);
   }
 }
