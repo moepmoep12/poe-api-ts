@@ -1,4 +1,5 @@
 export class APIError extends Error {
+  /* istanbul ignore next */
   constructor(
     message: string,
     public code: number,

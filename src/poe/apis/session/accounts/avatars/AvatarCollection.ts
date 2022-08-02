@@ -39,7 +39,7 @@ export class AvatarCollection extends Transformable {
    * @returns The next set of avatars, `null` when there are no more entries
    * @throws [[APIError]]
    */
-  public async getNextPage(append = true): Promise<Avatar[] | null> {
+  public async getNextPage(/* istanbul ignore next */ append = true): Promise<Avatar[] | null> {
     if (typeof this.avatarOptions.page != "number" || this.avatarOptions.page < 1) {
       return null;
     }
@@ -48,6 +48,7 @@ export class AvatarCollection extends Transformable {
 
     const collection = await API.getAvatars(this.avatarOptions);
 
+    /* istanbul ignore if */
     if (append) {
       this.collection.push(...collection.collection);
       this.total += collection.collection.length;

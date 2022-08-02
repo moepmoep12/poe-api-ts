@@ -14,8 +14,8 @@ export function buildURL<T>(
 
   if (optionalParameters && defaults) {
     for (const key in defaults) {
+      /* istanbul ignore if */
       if (optionalParameters[key] == null) {
-        /* istanbul ignore next */
         optionalParameters[key] = defaults[key];
       }
     }
@@ -27,6 +27,7 @@ export function buildURL<T>(
 
   if (optionalParameters != null) {
     for (const [key, value] of Object.entries(optionalParameters)) {
+      /* istanbul ignore if */
       if (value != null) {
         urlObj.searchParams.append(key, value as string);
       }

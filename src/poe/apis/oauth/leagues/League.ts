@@ -10,6 +10,7 @@ import { Ladders } from "..";
 export class OAuthLeague extends League {
   public async getLadder(store: boolean, options?: OAuthLadderOptions): Promise<Ladder> {
     const ladder = await Ladders.get(this.id, options);
+    /* istanbul ignore else */
     if (store) this.ladder = ladder;
     return ladder;
   }

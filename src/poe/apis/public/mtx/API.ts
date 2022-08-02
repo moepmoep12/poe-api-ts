@@ -10,7 +10,7 @@ import { MTXCollection } from "./MTXCollection";
  * @throws [[APIError]]
  */
 export const getSpecials = async (limit?: number): Promise<MTXCollection> => {
-  const options = limit ? { limit } : undefined;
+  const options = limit ? /* istanbul ignore next */ { limit } : undefined;
   const url = buildURL(PublicEndpoints.MTXSpecials, options);
 
   return await requestTransformed(MTXCollection, url);
