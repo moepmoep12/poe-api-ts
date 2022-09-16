@@ -190,10 +190,18 @@ export interface WeaponFilters {
 }
 
 export interface StatFilter {
-  type: string;
+  type: StatFilterType;
   filters: Stat[];
   value?: Range;
   disabled?: boolean;
+}
+
+export enum StatFilterType {
+  And = "and",
+  Not = "not",
+  Count = "count",
+  Weight = "weight",
+  If = "if",
 }
 
 export interface Stat {
