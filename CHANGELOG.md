@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/moepmoep12/poe-api-ts/compare/v1.2.0...v1.3.0) (2022-09-16)
+
+
+### Features
+
+* Add fixed types for trade stat filters ([96b3a7e](https://github.com/moepmoep12/poe-api-ts/commit/96b3a7ec34e5595779c9a0581f29e85790f4a8da))
+
 # [1.2.0](https://github.com/moepmoep12/poe-api-ts/compare/v1.1.0...v1.2.0) (2022-09-16)
 
 
