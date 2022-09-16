@@ -8,6 +8,7 @@ export enum Variant {
   Gen12 = ", Gen-12",
   Gen13 = ", Gen-13",
   Gen14 = ", Gen-14",
+  Gen15 = ", Gen-15",
   Harvest = "Harvest",
   Heist = "Heist",
   Legion = "Legion",
