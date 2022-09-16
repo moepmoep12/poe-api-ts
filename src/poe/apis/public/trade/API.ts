@@ -1,4 +1,4 @@
-import { requestTransformed } from "../../../../common/functions";
+import { buildURL, requestTransformed } from "../../../../common/functions";
 
 import { TradeItemGroup } from "../../../shared/trade/items";
 
@@ -71,8 +71,15 @@ export const getTradeItems = async (): Promise<TradeItemGroup[]> => {
  * @returns A collection of listed items with the provided hashes
  * @throws [[APIError]]
  */
-export const fetch = async (hashes: string[]): Promise<FetchResult[]> => {
-  const url = new URL(`${PublicEndpoints.TradeFetch}/${hashes.join(",")}`);
+export const fetch = async (hashes: string[], query?: string): Promise<FetchResult[]> => {
+  const url = buildURL(
+    `${PublicEndpoints.TradeFetch}/${hashes.join(",")}`,
+    query
+      ? {
+          query: query,
+        }
+      : {}
+  );
   const response = await requestTransformed(TradeFetchResponse, url);
   return response.result;
 };

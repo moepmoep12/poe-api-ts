@@ -9,11 +9,11 @@ export class CurrencyDetail extends Transformable {
 
   @IsNotEmpty()
   @IsString()
-  icon!: string;
-
-  @IsNotEmpty()
-  @IsString()
   name!: string;
+
+  @IsOptional()
+  @IsString()
+  icon?: string;
 
   @IsOptional()
   @IsNotEmpty()

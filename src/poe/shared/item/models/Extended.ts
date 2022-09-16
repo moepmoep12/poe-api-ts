@@ -1,5 +1,15 @@
 import { Type } from "class-transformer";
-import { IsInt, IsNotEmpty, IsOptional, IsString, Min, ValidateNested } from "class-validator";
+import {
+  IsBoolean,
+  IsInt,
+  IsNotEmpty,
+  IsNumber,
+  IsOptional,
+  IsString,
+  Max,
+  Min,
+  ValidateNested,
+} from "class-validator";
 
 import { ModHashes } from "./ModHashes";
 import { Mods } from "./Mods";
@@ -34,6 +44,42 @@ export class Extended {
   @ValidateNested()
   @Type(/* istanbul ignore next */ () => Mods)
   mods?: Mods;
+
+  @IsOptional()
+  @Min(0)
+  @Max(1)
+  //only present on armours
+  base_defence_percentile?: number;
+
+  @IsOptional()
+  @IsNumber()
+  //only present on armours
+  ar?: number;
+
+  @IsOptional()
+  @IsBoolean()
+  //only present on armours
+  ar_aug?: boolean;
+
+  @IsOptional()
+  @IsNumber()
+  //only present on armours
+  ev?: number;
+
+  @IsOptional()
+  @IsBoolean()
+  //only present on armours
+  ev_aug?: boolean;
+
+  @IsOptional()
+  @IsNumber()
+  //only present on armours
+  es?: number;
+
+  @IsOptional()
+  @IsBoolean()
+  //only present on armours
+  es_aug?: boolean;
 
   @ValidateNested()
   @Type(/* istanbul ignore next */ () => ModHashes)

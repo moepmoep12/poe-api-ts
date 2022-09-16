@@ -53,7 +53,7 @@ describe("Path of Exile - PublicAPI - Trade", function () {
   describe(`fetch()`, () => {
     this.timeout(10000);
 
-    const hashes = ["cf963575c90fb933ba41a1820e8e27ded27ef013e72430fdd44e5bb9350852db"];
+    const hashes = ["977cf61567e9341a4a88d6d6ef9e5eebc4620d16d26174b5d07205c7514772cb"];
     let results: FetchResult[];
 
     it(`#fetch() - should return listed items with provided hash values`, async () => {

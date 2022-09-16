@@ -1,6 +1,7 @@
 import { Type } from "class-transformer";
 import {
   IsBoolean,
+  IsEnum,
   IsNotEmpty,
   IsOptional,
   IsString,
@@ -9,6 +10,7 @@ import {
 } from "class-validator";
 
 import { Transformable } from "../../../../../common/classes";
+import { Realm } from "../../../models";
 
 import { Online } from "./Online";
 
@@ -32,4 +34,8 @@ export abstract class ListedAccount extends Transformable {
   @IsOptional()
   @IsBoolean()
   current?: boolean;
+
+  @IsOptional()
+  @IsEnum(Realm)
+  realm?: Realm;
 }

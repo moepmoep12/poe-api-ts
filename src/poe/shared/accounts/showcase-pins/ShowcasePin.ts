@@ -1,4 +1,12 @@
-import { IsInt, IsNotEmpty, IsString, Min, ValidateIf } from "class-validator";
+import {
+  IsBoolean,
+  IsInt,
+  IsNotEmpty,
+  IsOptional,
+  IsString,
+  Min,
+  ValidateIf,
+} from "class-validator";
 
 import { Transformable } from "../../../../common/classes/Transformable";
 
@@ -27,4 +35,8 @@ export class ShowcasePin extends Transformable {
   @IsNotEmpty()
   @IsString()
   icon!: string;
+
+  @IsOptional()
+  @IsBoolean()
+  challenges?: boolean;
 }
