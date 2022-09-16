@@ -22,6 +22,7 @@ import {
   ExchangeResults,
 } from "../../../src/poe/shared/trade/query/exchange";
 import { FetchResult } from "../../../src/poe/shared/trade/query/fetch";
+import { StatFilterType } from "../../../src/poe/shared/trade/query/Query";
 
 if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
 
@@ -151,7 +152,7 @@ describe("Path of Exile - PublicAPI - Trade", function () {
 
     it(`#search(${league}, query) - should return search results`, async () => {
       const query: SearchQueryContainer = {
-        query: { status: { option: "online" }, stats: [{ type: "and", filters: [] }] },
+        query: { status: { option: "online" }, stats: [{ type: StatFilterType.And, filters: [] }] },
         sort: { price: "asc" },
       };
 
