@@ -13,4 +13,5 @@ export enum BlightOil {
   SilverOil = "Silver Oil",
   GoldenOil = "Golden Oil",
   TaintedOil = "Tainted Oil",
+  ReflectiveOil = "Reflective Oil",
 }

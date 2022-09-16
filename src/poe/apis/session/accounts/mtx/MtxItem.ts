@@ -20,9 +20,10 @@ export class MtxItem extends ItemBase {
   @Min(0)
   count!: number;
 
-  @IsArray()
   @IsString({ each: true })
-  tags!: string[];
+  @IsArray()
+  @ValidateIf((_, val) => val != null)
+  tags!: null | string[];
 
   @IsOptional()
   @IsArray()

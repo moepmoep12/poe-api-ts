@@ -1,5 +1,5 @@
 import { Type } from "class-transformer";
-import { IsArray, ValidateNested } from "class-validator";
+import { IsArray, IsOptional, ValidateNested } from "class-validator";
 
 import { Transformable } from "../../../../common/classes";
 
@@ -11,8 +11,9 @@ export class Mods extends Transformable {
   @Type(/* istanbul ignore next */ () => Mod)
   explicit!: Mod[];
 
+  @IsOptional()
   @IsArray()
   @ValidateNested({ each: true })
   @Type(/* istanbul ignore next */ () => Mod)
-  implicit!: Mod[];
+  implicit?: Mod[];
 }

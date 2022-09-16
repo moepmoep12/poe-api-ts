@@ -52,6 +52,10 @@ export class ItemBase extends Transformable {
   @Min(0)
   exaltedValue!: number;
 
+  @IsNumber()
+  @Min(0)
+  divineValue!: number;
+
   @IsInt()
   @Min(0)
   count!: number;
