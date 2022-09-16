@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/moepmoep12/poe-api-ts/compare/v1.1.0...v1.2.0) (2022-09-16)
+
+
+### Bug Fixes
+
+* Add new map variant ([193e4c7](https://github.com/moepmoep12/poe-api-ts/commit/193e4c763858b2821b4bd0f54554c5f4ced70f57))
+
+
+### Features
+
+* Update to PoE 3.19 ([cf9b6ed](https://github.com/moepmoep12/poe-api-ts/commit/cf9b6ed0eac9de002903e089f0b23cbd85dbc41d))
+
 # [1.1.0](https://github.com/moepmoep12/poe-api-ts/compare/v1.0.2...v1.1.0) (2022-08-02)
 
 
