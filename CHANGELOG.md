@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/moepmoep12/poe-api-ts/compare/v2.0.1...v2.0.2) (2022-10-16)
+
+
+### Bug Fixes
+
+* Add class-validator as normal dependency ([23aa04d](https://github.com/moepmoep12/poe-api-ts/commit/23aa04dfa882c78a1c8b9e486d9e993e1dbe2af3))
+
 ## [2.0.1](https://github.com/moepmoep12/poe-api-ts/compare/v2.0.0...v2.0.1) (2022-10-16)
 
 
