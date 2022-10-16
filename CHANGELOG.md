@@ -1,3 +1,16 @@
+# [2.0.0](https://github.com/moepmoep12/poe-api-ts/compare/v1.3.0...v2.0.0) (2022-10-16)
+
+
+### Features
+
+* Add language to Trade API ([e84c05e](https://github.com/moepmoep12/poe-api-ts/commit/e84c05e52fef0866e4ea5d65ccf49247d70a3239))
+
+
+### BREAKING CHANGES
+
+* The Trade API can now be used with the available languages except Korean.
+Therefore, the buildURL function now supports a language prefix parameter.
+
 # [1.3.0](https://github.com/moepmoep12/poe-api-ts/compare/v1.2.0...v1.3.0) (2022-09-16)
 
 
