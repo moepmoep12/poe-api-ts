@@ -1,5 +1,6 @@
 import { buildURL, requestTransformed } from "../../../../common/functions";
 
+import { Language } from "../../../shared";
 import { TradeItemGroup } from "../../../shared/trade/items";
 
 import { TradeLeague } from "../../../shared/trade/leagues";
@@ -20,31 +21,37 @@ import { TradeStatsResponse } from "./stats/Response";
 
 /**
  * @endpoint https://pathofexile.com/api/trade/data/leagues
+ * @param language: The language. Default: English
+ *
  * @returns A list of currently active trade leagues.
  * @throws [[APIError]]
  */
-export const getLeagues = async (): Promise<TradeLeague[]> => {
-  const url = new URL(PublicEndpoints.TradeLeagues);
+export const getLeagues = async (language?: Language): Promise<TradeLeague[]> => {
+  const url = buildURL(PublicEndpoints.TradeLeagues, undefined, undefined, undefined, language);
   const response: TradeLeagueResponse = await requestTransformed(TradeLeagueResponse, url);
   return response.result;
 };
 
 /**
  * @endpoint https://pathofexile.com/api/trade/data/stats
+ * @param language: The language. Default: English
+ *
  * @throws [[APIError]]
  */
-export const getStats = async (): Promise<StatGroup[]> => {
-  const url = new URL(PublicEndpoints.TradeStats);
+export const getStats = async (language?: Language): Promise<StatGroup[]> => {
+  const url = buildURL(PublicEndpoints.TradeStats, undefined, undefined, undefined, language);
   const response = await requestTransformed(TradeStatsResponse, url);
   return response.result;
 };
 
 /**
  * @endpoint https://pathofexile.com/api/trade/data/static
+ * @param language: The language. Default: English
+ *
  * @throws [[APIError]]
  */
-export const getStatic = async (): Promise<Group[]> => {
-  const url = new URL(PublicEndpoints.TradeStatic);
+export const getStatic = async (language?: Language): Promise<Group[]> => {
+  const url = buildURL(PublicEndpoints.TradeStatic, undefined, undefined, undefined, language);
   const response = await requestTransformed(TradeStaticResponse, url);
   return response.result;
 };
@@ -52,12 +59,13 @@ export const getStatic = async (): Promise<Group[]> => {
 /**
  *
  * @endpoint https://pathofexile.com/api/trade/data/items
+ * @param language: The language. Default: English
  *
  * @returns A list of tradeable item bases including unique items.
  * @throws [[APIError]]
  */
-export const getTradeItems = async (): Promise<TradeItemGroup[]> => {
-  const url = new URL(PublicEndpoints.TradeItems);
+export const getTradeItems = async (language?: Language): Promise<TradeItemGroup[]> => {
+  const url = buildURL(PublicEndpoints.TradeItems, undefined, undefined, undefined, language);
   const response = await requestTransformed(TradeItemsResponse, url);
   return response.result;
 };

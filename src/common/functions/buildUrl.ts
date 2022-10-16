@@ -8,9 +8,14 @@ export function buildURL<T>(
   url: string,
   optionalParameters?: T,
   defaults?: T,
-  additionalParameters?: Parameters
+  additionalParameters?: Parameters,
+  languagePrefix?: string
 ): URL {
   const urlObj: URL = new URL(url);
+
+  if (languagePrefix) {
+    urlObj.host = `${languagePrefix}.${urlObj.host}`;
+  }
 
   if (optionalParameters && defaults) {
     for (const key in defaults) {

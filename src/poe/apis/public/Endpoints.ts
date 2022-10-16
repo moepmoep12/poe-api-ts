@@ -20,7 +20,7 @@ export enum PublicEndpoints {
   TradeStatic = "https://pathofexile.com/api/trade/data/static",
   TradeIgnore = "https://pathofexile.com/api/trade/ignore",
   TradeItems = "https://pathofexile.com/api/trade/data/items",
-  TradeFetch = "https://www.pathofexile.com/api/trade/fetch",
+  TradeFetch = "https://pathofexile.com/api/trade/fetch",
   TradeSearch = "https://www.pathofexile.com/api/trade/search",
   TradeExchange = "https://www.pathofexile.com/api/trade/exchange",
 }
