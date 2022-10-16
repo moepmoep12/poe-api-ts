@@ -1,6 +1,6 @@
 {
   "name": "poe-api-ts",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Tools & Utilities for accessing the official Path of Exile APIs and thirdparty APIs",
   "scripts": {
     "build": "tsc",

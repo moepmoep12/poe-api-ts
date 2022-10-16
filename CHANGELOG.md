@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/moepmoep12/poe-api-ts/compare/v2.0.0...v2.0.1) (2022-10-16)
+
+
+### Bug Fixes
+
+* Import in README.md ([213689b](https://github.com/moepmoep12/poe-api-ts/commit/213689b859306264b9ca69ec8ab9693b74c83ac6))
+
 # [2.0.0](https://github.com/moepmoep12/poe-api-ts/compare/v1.3.0...v2.0.0) (2022-10-16)
 
 
