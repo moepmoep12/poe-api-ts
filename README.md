@@ -42,7 +42,7 @@ Install the latest stable version of this library:
 ## Getting started
 
 ```typescript
-import { PathOfExile } from "poe-api-wrappers";
+import { PathOfExile } from "poe-api-ts";
 ```
 
 Before making requests to the official API, you should set your user agent, as requested by GGG [here](https://www.pathofexile.com/forum/view-thread/3019033/page/1#p23790007).
