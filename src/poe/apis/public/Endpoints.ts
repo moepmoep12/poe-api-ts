@@ -24,3 +24,14 @@ export enum PublicEndpoints {
   TradeSearch = "https://www.pathofexile.com/api/trade/search",
   TradeExchange = "https://www.pathofexile.com/api/trade/exchange",
 }
+
+export enum KoreanTradeEndpoints {
+  TradeLeagues = "https://poe.game.daum.net/api/trade/data/leagues",
+  TradeStats = "https://poe.game.daum.net/api/trade/data/stats",
+  TradeStatic = "https://poe.game.daum.net/api/trade/data/static",
+  TradeIgnore = "https://poe.game.daum.net/api/trade/ignore",
+  TradeItems = "https://poe.game.daum.net/api/trade/data/items",
+  TradeFetch = "https://poe.game.daum.net/api/trade/fetch",
+  TradeSearch = "https://poe.game.daum.net/api/trade/search",
+  TradeExchange = "https://poe.game.daum.net/api/trade/exchange",
+}

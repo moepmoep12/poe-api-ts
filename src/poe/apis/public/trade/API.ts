@@ -11,7 +11,7 @@ import { SearchQueryContainer, SearchResult } from "../../../shared/trade/query/
 import { Group } from "../../../shared/trade/static";
 import { StatGroup } from "../../../shared/trade/stats";
 
-import { PublicEndpoints } from "../Endpoints";
+import { KoreanTradeEndpoints, PublicEndpoints } from "../Endpoints";
 import { TradeFetchResponse } from "./fetch/Response";
 import { TradeItemsResponse } from "./items/Response";
 import { TradeLeagueResponse } from "./leagues/Response";
@@ -27,7 +27,7 @@ import { TradeStatsResponse } from "./stats/Response";
  * @throws [[APIError]]
  */
 export const getLeagues = async (language?: Language): Promise<TradeLeague[]> => {
-  const url = buildURL(PublicEndpoints.TradeLeagues, undefined, undefined, undefined, language);
+  const url = handleKoreanURL("TradeLeagues", language);
   const response: TradeLeagueResponse = await requestTransformed(TradeLeagueResponse, url);
   return response.result;
 };
@@ -39,7 +39,7 @@ export const getLeagues = async (language?: Language): Promise<TradeLeague[]> =>
  * @throws [[APIError]]
  */
 export const getStats = async (language?: Language): Promise<StatGroup[]> => {
-  const url = buildURL(PublicEndpoints.TradeStats, undefined, undefined, undefined, language);
+  const url = handleKoreanURL("TradeStats", language);
   const response = await requestTransformed(TradeStatsResponse, url);
   return response.result;
 };
@@ -51,7 +51,7 @@ export const getStats = async (language?: Language): Promise<StatGroup[]> => {
  * @throws [[APIError]]
  */
 export const getStatic = async (language?: Language): Promise<Group[]> => {
-  const url = buildURL(PublicEndpoints.TradeStatic, undefined, undefined, undefined, language);
+  const url = handleKoreanURL("TradeStatic", language);
   const response = await requestTransformed(TradeStaticResponse, url);
   return response.result;
 };
@@ -65,7 +65,7 @@ export const getStatic = async (language?: Language): Promise<Group[]> => {
  * @throws [[APIError]]
  */
 export const getTradeItems = async (language?: Language): Promise<TradeItemGroup[]> => {
-  const url = buildURL(PublicEndpoints.TradeItems, undefined, undefined, undefined, language);
+  const url = handleKoreanURL("TradeItems", language);
   const response = await requestTransformed(TradeItemsResponse, url);
   return response.result;
 };
@@ -125,3 +125,17 @@ export const exchange = async (
   const result = await requestTransformed(ExchangeResults, url, "POST", query);
   return result;
 };
+
+function handleKoreanURL(
+  endpointKey: keyof typeof KoreanTradeEndpoints & keyof typeof PublicEndpoints,
+  language?: Language
+): URL {
+  let endpoint: PublicEndpoints | KoreanTradeEndpoints = PublicEndpoints[endpointKey];
+
+  if (language == Language.Korean) {
+    endpoint = KoreanTradeEndpoints[endpointKey];
+    language = undefined;
+  }
+
+  return buildURL(endpoint, undefined, undefined, undefined, language);
+}

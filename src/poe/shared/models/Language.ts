@@ -5,4 +5,5 @@ export enum Language {
   German = "de",
   French = "fr",
   Spanish = "es",
+  Korean = "ko-KR",
 }

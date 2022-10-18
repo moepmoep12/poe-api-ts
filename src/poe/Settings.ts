@@ -1,3 +1,5 @@
+import { Agent } from "https";
+
 export abstract class Settings {
   /**
    * The POESESSID cookie
@@ -21,4 +23,9 @@ export abstract class Settings {
    * https://www.pathofexile.com/developer/docs/authorization
    */
   public static serviceToken: string;
+
+  /**
+   * Optional: The https Agent used for performing requests over https
+   */
+  public static httpsAgent?: Agent;
 }
