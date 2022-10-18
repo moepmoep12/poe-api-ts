@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/moepmoep12/poe-api-ts/compare/v2.0.2...v2.1.0) (2022-10-18)
+
+
+### Features
+
+* Add Korean TradeAPI ([05cdcc5](https://github.com/moepmoep12/poe-api-ts/commit/05cdcc570fad4fb3a92fbc80a7016c9eb4ec67d4))
+
 ## [2.0.2](https://github.com/moepmoep12/poe-api-ts/compare/v2.0.1...v2.0.2) (2022-10-16)
 
 
