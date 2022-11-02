@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/moepmoep12/poe-api-ts/compare/v2.1.0...v2.1.1) (2022-11-02)
+
+
+### Bug Fixes
+
+* Add DevDep @types/color ([d306aae](https://github.com/moepmoep12/poe-api-ts/commit/d306aae2dcf0a6eb2a63e0c29ae378322f9afd02))
+
 # [2.1.0](https://github.com/moepmoep12/poe-api-ts/compare/v2.0.2...v2.1.0) (2022-10-18)
 
 
