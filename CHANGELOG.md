@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/moepmoep12/poe-api-ts/compare/v2.1.1...v2.1.2) (2022-11-12)
+
+
+### Bug Fixes
+
+* Update LICENSE ([16658f1](https://github.com/moepmoep12/poe-api-ts/commit/16658f1d6ea4d34676d4ef24897077b39c769bdb))
+
 ## [2.1.1](https://github.com/moepmoep12/poe-api-ts/compare/v2.1.0...v2.1.1) (2022-11-02)
 
 
