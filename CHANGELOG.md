@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/moepmoep12/poe-api-ts/compare/v2.1.2...v2.2.0) (2022-12-01)
+
+
+### Features
+
+* Add getOverviewAll to poeninja ([a4387bc](https://github.com/moepmoep12/poe-api-ts/commit/a4387bc3104fa4a9b4c5a79dbe11a32588f1350f))
+
 ## [2.1.2](https://github.com/moepmoep12/poe-api-ts/compare/v2.1.1...v2.1.2) (2022-11-12)
 
 
