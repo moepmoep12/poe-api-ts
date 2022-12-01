@@ -21,4 +21,5 @@ export * as HelmetEnchants from "./helmetenchants";
 export * as Beasts from "./beasts";
 export * as Essences from "./essences";
 export * as Vials from "./vials";
+export * from "./models";
 export * from "./API";
