@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/moepmoep12/poe-api-ts/compare/v2.2.0...v2.3.0) (2022-12-02)
+
+
+### Features
+
+* remove sentinel from poeninja ([e791930](https://github.com/moepmoep12/poe-api-ts/commit/e791930629077d25742dc86766c0d662b92abeb8))
+
 # [2.2.0](https://github.com/moepmoep12/poe-api-ts/compare/v2.1.2...v2.2.0) (2022-12-01)
 
 
