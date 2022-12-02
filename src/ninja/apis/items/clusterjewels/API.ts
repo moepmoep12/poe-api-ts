@@ -14,7 +14,7 @@ export const getOverview = async (
   league: string,
   language: LanguageCode = LanguageCode.en
 ): Promise<ClusterJewelOverview> => {
-  return await getOverviewGeneric(league, ItemOption.ClusterJewel, language, ClusterJewelOverview);
+  return await getOverviewGeneric(league, ItemOption.ClusterJewel, language);
 };
 
 /**

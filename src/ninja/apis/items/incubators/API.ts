@@ -14,7 +14,7 @@ export const getOverview = async (
   league: string,
   language: LanguageCode = LanguageCode.en
 ): Promise<IncubatorOverview> => {
-  return await getOverviewGeneric(league, ItemOption.Incubator, language, IncubatorOverview);
+  return await getOverviewGeneric(league, ItemOption.Incubator, language);
 };
 
 /**

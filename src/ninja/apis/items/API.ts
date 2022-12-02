@@ -5,54 +5,76 @@ import { HistoryPoint, LanguageCode } from "../../shared";
 import { ItemBase, ItemOverview } from "../../shared/items";
 import { ItemOption } from "./models/ItemOption";
 
-import { DeliriumOrbOverview } from "./deliriumorbs";
-import { IncubatorOverview } from "./incubators";
-import { InvitationOverview } from "./invitations";
-import { OilOverview } from "./oils";
-import { ScarabOverview } from "./scarabs";
-import { FossilOverview } from "./fossils";
-import { ResonatorOverview } from "./resonators";
-import { EssenceOverview } from "./essences";
-import { DivinitationCardOverview } from "./div";
-import { SkillGemOverview } from "./gems";
-import { BaseTypeOverview } from "./basetypes";
-import { HelmetEnchantOverview } from "./helmetenchants";
-import { MapOverview } from "./maps";
-import { UniqueJewelOverview } from "./jewels";
-import { UniqueFlaskOverview } from "./flasks";
-import { UniqueWeaponOverview } from "./weapons";
-import { UniqueArmourOverview } from "./armours";
-import { UniqueAccessoireOverview } from "./accessoires";
-import { BeastOverview } from "./beasts";
-import { VialOverview } from "./vials";
-import { ArtifactOverview } from "./artifacts";
-import { ClusterJewelOverview } from "./clusterjewels";
-import { SentinelOverview } from "./sentinels";
+import { DivinationCard } from "./div/DivinationCard";
+import { DivinitationCardOverview } from "./div/ItemOverview";
+import { DeliriumOrb, DeliriumOrbOverview } from "./deliriumorbs";
+import { Incubator, IncubatorOverview } from "./incubators";
+import { Invitation, InvitationOverview } from "./invitations";
+import { Oil, OilOverview } from "./oils";
+import { Scarab, ScarabOverview } from "./scarabs";
+import { Fossil, FossilOverview } from "./fossils";
+import { Resonator, ResonatorOverview } from "./resonators";
+import { Essence, EssenceOverview } from "./essences";
+import { SkillGem, SkillGemOverview } from "./gems";
+import { BaseType, BaseTypeOverview } from "./basetypes";
+import { HelmetEnchant, HelmetEnchantOverview } from "./helmetenchants";
+import { MapOverview, Map } from "./maps";
+import { UniqueJewel, UniqueJewelOverview } from "./jewels";
+import { UniqueFlask, UniqueFlaskOverview } from "./flasks";
+import { UniqueWeapon, UniqueWeaponOverview } from "./weapons";
+import { UniqueArmour, UniqueArmourOverview } from "./armours";
+import { UniqueAccessoire, UniqueAccessoireOverview } from "./accessoires";
+import { Beast, BeastOverview } from "./beasts";
+import { Vial, VialOverview } from "./vials";
+import { Artifact, ArtifactOverview } from "./artifacts";
+import { ClusterJewel, ClusterJewelOverview } from "./clusterjewels";
 
-/**
- * @endpoint https://poe.ninja/api/data/ItemOverview
- * @param league
- * @param language
- */
-export const getOverviewGeneric = async <T extends ItemBase>(
-  league: string,
-  type: ItemOption,
-  /* istanbul ignore next */
-  language: LanguageCode = LanguageCode.en,
-  cls: new () => ItemOverview<T>
-): Promise<ItemOverview<T>> => {
-  const url = buildURL(NinjaEndpoints.ItemOverview, null, null, {
-    league,
-    type,
-    language,
-  });
-  return await requestTransformed(cls, url);
+export type OptionMapping = {
+  Invitation: Invitation;
+  DeliriumOrb: DeliriumOrb;
+  Oil: Oil;
+  Incubator: Incubator;
+  Scarab: Scarab;
+  Fossil: Fossil;
+  Resonator: Resonator;
+  Essence: Essence;
+  DivinationCard: DivinationCard;
+  SkillGem: SkillGem;
+  BaseType: BaseType;
+  HelmetEnchant: HelmetEnchant;
+  UniqueMap: Map;
+  Map: Map;
+  UniqueJewel: UniqueJewel;
+  UniqueFlask: UniqueFlask;
+  UniqueWeapon: UniqueWeapon;
+  UniqueArmour: UniqueArmour;
+  UniqueAccessory: UniqueAccessoire;
+  Beast: Beast;
+  Vial: Vial;
+  Artifact: Artifact;
+  ClusterJewel: ClusterJewel;
+  BlightedMap: Map;
+  BlightRavagedMap: Map;
+  Watchstone: undefined;
+  Prophecy: undefined;
+  Sentinel: undefined;
 };
 
-const mapping: Record<ItemOption, (new () => ItemOverview<ItemBase>) | undefined> = {
+export type RetType<T extends ItemOption> = OptionMapping[T] extends ItemBase
+  ? ItemOverview<OptionMapping[T]>
+  : undefined;
+
+export type OverviewAllResult = {
+  [P in ItemOption]: RetType<P>;
+};
+
+type ConstructorMapping = {
+  [P in ItemOption]: OptionMapping[P] extends ItemBase ? new () => RetType<P> : undefined;
+};
+
+const overviewConstructorMapping: Partial<ConstructorMapping> = {
   Invitation: InvitationOverview,
   DeliriumOrb: DeliriumOrbOverview,
-  Watchstone: undefined,
   Oil: OilOverview,
   Incubator: IncubatorOverview,
   Scarab: ScarabOverview,
@@ -60,7 +82,6 @@ const mapping: Record<ItemOption, (new () => ItemOverview<ItemBase>) | undefined
   Resonator: ResonatorOverview,
   Essence: EssenceOverview,
   DivinationCard: DivinitationCardOverview,
-  Prophecy: undefined,
   SkillGem: SkillGemOverview,
   BaseType: BaseTypeOverview,
   HelmetEnchant: HelmetEnchantOverview,
@@ -77,35 +98,60 @@ const mapping: Record<ItemOption, (new () => ItemOverview<ItemBase>) | undefined
   ClusterJewel: ClusterJewelOverview,
   BlightedMap: MapOverview,
   BlightRavagedMap: MapOverview,
-  Sentinel: SentinelOverview,
+  Watchstone: undefined,
+  Prophecy: undefined,
+  Sentinel: undefined,
 };
 
-export const getOverviewAll = async (
+/**
+ * @endpoint https://poe.ninja/api/data/ItemOverview
+ * @param league
+ * @param language
+ */
+export const getOverviewGeneric = async <T extends ItemOption>(
+  league: string,
+  type: T,
+  /* istanbul ignore next */
+  language: LanguageCode = LanguageCode.en
+): Promise<RetType<T>> => {
+  const constructorFn = overviewConstructorMapping[type];
+  if (!constructorFn) return undefined as RetType<T>;
+
+  const url = buildURL(NinjaEndpoints.ItemOverview, null, null, {
+    league,
+    type,
+    language,
+  });
+
+  return await requestTransformed(constructorFn, url);
+};
+
+export const getOverviewAll = async <T extends ItemOption>(
   league: string,
   language: LanguageCode = LanguageCode.en
-): Promise<Map<ItemOption, ItemOverview<ItemBase> | undefined>> => {
-  const map: Map<ItemOption, ItemOverview<ItemBase> | undefined> = new Map();
+): Promise<OverviewAllResult> => {
+  const result: Partial<Record<ItemOption, ItemOverview<ItemBase>>> = {};
   const promises = [];
 
-  for (const [entry, constructorFn] of Object.entries(mapping)) {
-    const itemOption = entry as ItemOption;
+  for (const [entry, constructorFn] of Object.entries(overviewConstructorMapping)) {
+    const itemOption = entry as T;
 
     if (constructorFn) {
       promises.push(
-        getOverviewGeneric(league, itemOption, language, constructorFn)
-          .then((val) => map.set(itemOption, val))
+        getOverviewGeneric(league, itemOption, language)
+          .then((val) => (result[itemOption] = val))
           .catch(() => {
-            map.set(itemOption, undefined);
+            result[itemOption] = undefined;
           })
       );
     } else {
-      map.set(itemOption, undefined);
+      result[itemOption] = undefined;
     }
   }
 
   await Promise.all(promises);
 
-  return map;
+  return result as OverviewAllResult;
 };
 
 /**

@@ -14,7 +14,7 @@ export const getOverview = async (
   league: string,
   language: LanguageCode = LanguageCode.en
 ): Promise<DeliriumOrbOverview> => {
-  return await getOverviewGeneric(league, ItemOption.DeliriumOrb, language, DeliriumOrbOverview);
+  return await getOverviewGeneric(league, ItemOption.DeliriumOrb, language);
 };
 
 /**

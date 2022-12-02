@@ -14,7 +14,7 @@ export const getOverview = async (
   league: string,
   language: LanguageCode = LanguageCode.en
 ): Promise<ResonatorOverview> => {
-  return await getOverviewGeneric(league, ItemOption.Resonator, language, ResonatorOverview);
+  return await getOverviewGeneric(league, ItemOption.Resonator, language);
 };
 
 /**

@@ -19,7 +19,7 @@ export const getOverview = async (
     | ItemOption.BlightRavageddMap,
   language: LanguageCode = LanguageCode.en
 ): Promise<MapOverview> => {
-  return await getOverviewGeneric(league, type, language, MapOverview);
+  return await getOverviewGeneric(league, type, language);
 };
 
 /**

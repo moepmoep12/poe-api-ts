@@ -14,12 +14,7 @@ export const getOverview = async (
   league: string,
   language: LanguageCode = LanguageCode.en
 ): Promise<DivinitationCardOverview> => {
-  return await getOverviewGeneric(
-    league,
-    ItemOption.DivinationCard,
-    language,
-    DivinitationCardOverview
-  );
+  return await getOverviewGeneric(league, ItemOption.DivinationCard, language);
 };
 
 /**

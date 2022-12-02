@@ -14,7 +14,7 @@ export const getOverview = async (
   league: string,
   language: LanguageCode = LanguageCode.en
 ): Promise<ArtifactOverview> => {
-  return await getOverviewGeneric(league, ItemOption.Artifact, language, ArtifactOverview);
+  return await getOverviewGeneric(league, ItemOption.Artifact, language);
 };
 
 /**

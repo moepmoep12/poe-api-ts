@@ -14,12 +14,7 @@ export const getOverview = async (
   league: string,
   language: LanguageCode = LanguageCode.en
 ): Promise<UniqueAccessoireOverview> => {
-  return await getOverviewGeneric(
-    league,
-    ItemOption.UniqueAccessory,
-    language,
-    UniqueAccessoireOverview
-  );
+  return await getOverviewGeneric(league, ItemOption.UniqueAccessory, language);
 };
 
 /**

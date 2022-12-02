@@ -14,7 +14,7 @@ export const getOverview = async (
   league: string,
   language: LanguageCode = LanguageCode.en
 ): Promise<ScarabOverview> => {
-  return await getOverviewGeneric(league, ItemOption.Scarab, language, ScarabOverview);
+  return await getOverviewGeneric(league, ItemOption.Scarab, language);
 };
 
 /**

@@ -14,7 +14,7 @@ export const getOverview = async (
   league: string,
   language: LanguageCode = LanguageCode.en
 ): Promise<FossilOverview> => {
-  return await getOverviewGeneric(league, ItemOption.Fossil, language, FossilOverview);
+  return await getOverviewGeneric(league, ItemOption.Fossil, language);
 };
 
 /**

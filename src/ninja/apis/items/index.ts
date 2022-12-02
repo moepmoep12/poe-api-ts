@@ -10,7 +10,6 @@ export * as UniqueJewels from "./jewels";
 export * as SkillGems from "./gems";
 export * as ClusterJewels from "./clusterjewels";
 export * as Maps from "./maps";
-export * as Sentinels from "./sentinels";
 export * as DeliriumOrbs from "./deliriumorbs";
 export * as Invitations from "./invitations";
 export * as Scarabs from "./scarabs";

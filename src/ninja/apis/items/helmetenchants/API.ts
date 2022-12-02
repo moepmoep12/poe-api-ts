@@ -14,12 +14,7 @@ export const getOverview = async (
   league: string,
   language: LanguageCode = LanguageCode.en
 ): Promise<HelmetEnchantOverview> => {
-  return await getOverviewGeneric(
-    league,
-    ItemOption.HelmetEnchant,
-    language,
-    HelmetEnchantOverview
-  );
+  return await getOverviewGeneric(league, ItemOption.HelmetEnchant, language);
 };
 
 /**

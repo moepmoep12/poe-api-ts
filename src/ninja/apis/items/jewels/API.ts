@@ -14,7 +14,7 @@ export const getOverview = async (
   league: string,
   language: LanguageCode = LanguageCode.en
 ): Promise<UniqueJewelOverview> => {
-  return await getOverviewGeneric(league, ItemOption.UniqueJewel, language, UniqueJewelOverview);
+  return await getOverviewGeneric(league, ItemOption.UniqueJewel, language);
 };
 
 /**

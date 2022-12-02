@@ -14,7 +14,7 @@ export const getOverview = async (
   league: string,
   language: LanguageCode = LanguageCode.en
 ): Promise<BeastOverview> => {
-  return await getOverviewGeneric(league, ItemOption.Beast, language, BeastOverview);
+  return await getOverviewGeneric(league, ItemOption.Beast, language);
 };
 
 /**

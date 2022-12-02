@@ -14,7 +14,7 @@ export const getOverview = async (
   league: string,
   language: LanguageCode = LanguageCode.en
 ): Promise<VialOverview> => {
-  return await getOverviewGeneric(league, ItemOption.Vial, language, VialOverview);
+  return await getOverviewGeneric(league, ItemOption.Vial, language);
 };
 
 /**

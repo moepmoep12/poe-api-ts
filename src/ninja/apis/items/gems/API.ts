@@ -14,7 +14,7 @@ export const getOverview = async (
   league: string,
   language: LanguageCode = LanguageCode.en
 ): Promise<SkillGemOverview> => {
-  return await getOverviewGeneric(league, ItemOption.SkillGem, language, SkillGemOverview);
+  return await getOverviewGeneric(league, ItemOption.SkillGem, language);
 };
 
 /**

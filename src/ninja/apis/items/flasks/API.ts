@@ -14,7 +14,7 @@ export const getOverview = async (
   league: string,
   language: LanguageCode = LanguageCode.en
 ): Promise<UniqueFlaskOverview> => {
-  return await getOverviewGeneric(league, ItemOption.UniqueFlask, language, UniqueFlaskOverview);
+  return await getOverviewGeneric(league, ItemOption.UniqueFlask, language);
 };
 
 /**
