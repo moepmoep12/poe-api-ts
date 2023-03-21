@@ -1,5 +1,3 @@
-import { URL } from "url";
-
 interface Parameters {
   [key: string]: string;
 }

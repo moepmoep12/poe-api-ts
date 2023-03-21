@@ -13,7 +13,8 @@
     "resolveJsonModule": true,
     "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true,
-    "inlineSourceMap": true
+    "inlineSourceMap": true,
+    "lib": ["ES2017", "DOM"]
   },
   "exclude": ["./node_modules", "./dist", "./tests", "./libconsumer"],
   "include": ["src/**/*.ts"]

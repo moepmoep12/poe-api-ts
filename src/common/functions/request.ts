@@ -21,7 +21,6 @@ export async function request(
       method: method,
       headers: buildHeaders(url, headers),
       data: payload,
-      httpAgent: Settings.httpsAgent,
       transformResponse: [
         transformResponse
           ? transformResponse
@@ -30,6 +29,8 @@ export async function request(
             },
       ],
     };
+
+    if (Settings.httpsAgent) config.httpsAgent = Settings.httpsAgent;
 
     const response = await axios(config);
     const data = <string>response.data;
