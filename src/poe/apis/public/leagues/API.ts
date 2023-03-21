@@ -4,7 +4,7 @@ import {
   requestTransformed,
 } from "../../../../common/functions";
 
-import { League, LeagueRule } from "../../../shared/leagues";
+import { League } from "../../../shared/leagues";
 
 import { PublicEndpoints } from "../Endpoints";
 
@@ -44,23 +44,4 @@ export const getAll = async (options?: PublicListOptions): Promise<League[]> => 
 export const getById = async (id: string, options?: LeagueOptions): Promise<League> => {
   const url = buildURL(`${PublicEndpoints.Leagues}/${id}`, options);
   return await requestTransformed(PublicLeague, url);
-};
-
-/**
- * @endpoint http://api.pathofexile.com/league-rules
- * @throws [[APIError]]
- */
-export const getRules = async (): Promise<LeagueRule[]> => {
-  const url = buildURL(PublicEndpoints.LeagueRules);
-  return await requestTransformedArray(LeagueRule, url);
-};
-
-/**
- * @endpoint http://api.pathofexile.com/league-rules/id
- * @param id
- * @throws [[APIError]]
- */
-export const getRuleById = async (id: string): Promise<LeagueRule> => {
-  const url = buildURL(`${PublicEndpoints.LeagueRules}/${id}`);
-  return await requestTransformed(LeagueRule, url);
 };

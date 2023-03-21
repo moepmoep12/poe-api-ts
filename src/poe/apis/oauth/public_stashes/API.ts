@@ -1,4 +1,5 @@
 import { buildURL, requestTransformed } from "../../../../common/functions";
+import { Realm } from "../../../shared";
 
 import { Chunk } from "../../../shared/public_stashes";
 
@@ -28,9 +29,9 @@ import { OAuthChunk } from "./Chunk";
  * @param nextChangeId pagination code
  * @throws [[APIError]]
  */
-export const getChunk = async (nextChangeId?: string): Promise<Chunk> => {
+export const getChunk = async (nextChangeId?: string, realm = Realm.PC): Promise<Chunk> => {
   const url = buildURL(
-    OAuthEndpoints.PublicStashChanges,
+    `${OAuthEndpoints.PublicStashChanges}${realm != Realm.PC ? "/" + realm : ""}`,
     nextChangeId ? { next_change_id: nextChangeId } : {}
   );
   return requestTransformed(OAuthChunk, url, "GET", {}, addServiceTokenHeader());

@@ -86,6 +86,7 @@
           "message": "Release <%= nextRelease.version %> [skip ci]",
           "assets": [
             "package.json",
+            "package-lock.json",
             "CHANGELOG.md"
           ]
         }

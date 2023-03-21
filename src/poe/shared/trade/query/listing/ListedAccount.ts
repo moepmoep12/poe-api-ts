@@ -19,8 +19,9 @@ export abstract class ListedAccount extends Transformable {
   @IsString()
   name!: string;
 
+  @IsOptional()
   @IsString()
-  lastCharacterName!: string;
+  lastCharacterName?: string;
 
   @ValidateNested()
   @ValidateIf((_, val) => val != null)

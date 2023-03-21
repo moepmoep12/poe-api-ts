@@ -1,7 +1,16 @@
 import { Type } from "class-transformer";
-import { IsBoolean, IsDate, IsEnum, IsNotEmpty, IsOptional, IsString } from "class-validator";
+import {
+  IsArray,
+  IsBoolean,
+  IsDate,
+  IsEnum,
+  IsNotEmpty,
+  IsOptional,
+  IsString,
+} from "class-validator";
 
 import { Transformable } from "../../../common/classes/Transformable";
+import { LeagueRule } from "../leagues";
 
 import { Realm } from "../models";
 
@@ -29,6 +38,10 @@ export abstract class PvpMatch extends Transformable {
 
   @IsEnum(PvpStyle)
   public style!: PvpStyle;
+
+  @IsArray()
+  @Type(/* istanbul ignore next */ () => LeagueRule)
+  public rules!: LeagueRule[];
 
   @IsOptional()
   @IsEnum(Realm)

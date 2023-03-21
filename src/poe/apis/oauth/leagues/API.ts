@@ -13,8 +13,6 @@ import { addServiceTokenHeader } from "../utils/Headers";
 
 import { OAuthLeague } from "./League";
 
-export { getRules, getRuleById } from "../../public/leagues/API";
-
 /**
  * @remarks
  * Requires [[Settings.serviceToken]] to be set and the scope `service:leagues`.

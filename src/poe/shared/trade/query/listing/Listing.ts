@@ -5,8 +5,9 @@ import { Transformable } from "../../../../../common/classes";
 import { ListedAccount } from "./ListedAccount";
 
 export class Listing extends Transformable {
+  @IsOptional()
   @IsString()
-  whisper!: string;
+  whisper?: string;
 
   @IsOptional()
   @IsString()

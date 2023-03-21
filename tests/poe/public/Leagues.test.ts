@@ -11,7 +11,6 @@ import { mochaGlobalSetup } from "../../mochaFixtures";
 
 import { Leagues } from "../../../src/poe/apis/public";
 
-import { LeagueRule } from "../../../src/poe/shared/leagues";
 import { PublicLeague } from "../../../src/poe/apis/public/leagues/League";
 
 if (process.env.MOCHA_WORKER_ID) mochaGlobalSetup();
@@ -39,48 +38,6 @@ describe("Path of Exile - PublicAPI - Leagues", function () {
             throw new ValidationErrorExt(error as ValidationError[]);
           else throw error;
         }
-      }
-    });
-  });
-
-  describe(`getRules()`, () => {
-    this.timeout(5000);
-
-    let rules: LeagueRule[];
-
-    it("#getRules() - should return all rules for leagues", async () => {
-      rules = <LeagueRule[]>await expect(Leagues.getRules()).to.be.fulfilled;
-    });
-
-    step("validateOrReject(result) - should be fulfilled", async () => {
-      for (const rule of rules) {
-        try {
-          await validateOrReject(rule, validatorOptions);
-        } catch (error: unknown) {
-          if (Array.isArray(error) && error[0] instanceof ValidationError)
-            throw new ValidationErrorExt(error as ValidationError[]);
-          else throw error;
-        }
-      }
-    });
-  });
-
-  describe(`getRuleById()`, () => {
-    this.timeout(5000);
-
-    let rule: LeagueRule;
-
-    it(`#getRuleById('Hardcore')) - should return all rules for a specific league`, async () => {
-      rule = <LeagueRule>await expect(Leagues.getRuleById("Hardcore")).to.be.fulfilled;
-    });
-
-    step("validateOrReject(result) - should be fulfilled", async () => {
-      try {
-        await validateOrReject(rule, validatorOptions);
-      } catch (error: unknown) {
-        if (Array.isArray(error) && error[0] instanceof ValidationError)
-          throw new ValidationErrorExt(error as ValidationError[]);
-        else throw error;
       }
     });
   });

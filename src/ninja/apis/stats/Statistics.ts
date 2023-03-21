@@ -78,4 +78,8 @@ export class Statistics extends Transformable {
    * @overrides `pob_characters_calculated`
    */
   pobCharactersCalculated!: number;
+
+  @IsInt()
+  @Min(0)
+  oauth_flows!: number;
 }

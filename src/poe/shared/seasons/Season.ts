@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsString } from "class-validator";
+import { IsBoolean, IsNotEmpty, IsString } from "class-validator";
 
 import { Transformable } from "../../../common/classes/Transformable";
 
@@ -10,4 +10,7 @@ export class Season extends Transformable {
   @IsNotEmpty()
   @IsString()
   name!: string;
+
+  @IsBoolean()
+  pvp!: boolean;
 }

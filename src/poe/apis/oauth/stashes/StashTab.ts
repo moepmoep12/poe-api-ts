@@ -21,6 +21,11 @@ export class OAuthStashTab extends StashTabBase {
 
   @IsOptional()
   @IsString()
+  // folder ID
+  public folder?: string;
+
+  @IsOptional()
+  @IsString()
   // parent ID
   public parent?: string;
 
