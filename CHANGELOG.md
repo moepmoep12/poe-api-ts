@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/moepmoep12/poe-api-ts/compare/v2.3.0...v2.4.0) (2023-03-21)
+
+
+### Features
+
+* update APIs ([b26fd35](https://github.com/moepmoep12/poe-api-ts/commit/b26fd35c193b31934a95d90185dcfc53aebaf5b3))
+
 # [2.3.0](https://github.com/moepmoep12/poe-api-ts/compare/v2.2.0...v2.3.0) (2022-12-02)
 
 
